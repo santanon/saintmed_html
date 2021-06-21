@@ -1,0 +1,105 @@
+.download--ir {
+  position: relative; }
+  .download--ir .download__cover {
+    position: absolute;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50%;
+    z-index: -1; }
+    .download--ir .download__cover::before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      height: 100%; }
+  .download--ir .download__content .block-download.block-download--highlight {
+    background: #0E3574 0% 0% no-repeat padding-box;
+    -webkit-box-shadow: 0px 5px 30px #0000001F;
+    box-shadow: 0px 5px 30px #0000001F;
+    padding: 30px 40px; }
+    .download--ir .download__content .block-download.block-download--highlight .block-download--list {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      margin-bottom: 15px;
+      padding-bottom: 10px; }
+      .download--ir .download__content .block-download.block-download--highlight .block-download--list .block-download__title {
+        font-size: 20px;
+        line-height: 22px;
+        color: #24E0E0; }
+      .download--ir .download__content .block-download.block-download--highlight .block-download--list .block-download__year {
+        font-size: 16px;
+        line-height: 46px;
+        color: #fff; }
+      .download--ir .download__content .block-download.block-download--highlight .block-download--list .list-download {
+        padding: 0; }
+        .download--ir .download__content .block-download.block-download--highlight .block-download--list .list-download .list-download__item {
+          margin-bottom: 0; }
+          .download--ir .download__content .block-download.block-download--highlight .block-download--list .list-download .list-download__item .btn--download {
+            padding: 0; }
+            .download--ir .download__content .block-download.block-download--highlight .block-download--list .list-download .list-download__item .btn--download .btn__icon .icon-download {
+              font-size: 40px;
+              color: #fff; }
+            .download--ir .download__content .block-download.block-download--highlight .block-download--list .list-download .list-download__item .btn--download .btn__text {
+              font-weight: 400;
+              color: #fff; }
+            .download--ir .download__content .block-download.block-download--highlight .block-download--list .list-download .list-download__item .btn--download:hover .btn__icon .icon-download {
+              color: #24e0e0; }
+      .download--ir .download__content .block-download.block-download--highlight .block-download--list:last-child {
+        padding-bottom: 0;
+        margin-bottom: 0; }
+  .download--ir .download__content .block-download .block-download--list {
+    border-bottom: 1px solid #707070;
+    margin-bottom: 40px; }
+    .download--ir .download__content .block-download .block-download--list .block-download__title {
+      font-size: 16px;
+      line-height: 24px;
+      color: #1294A6;
+      text-transform: uppercase;
+      font-weight: 700; }
+    .download--ir .download__content .block-download .block-download--list .block-download__year {
+      font-size: 26px;
+      line-height: 46px;
+      color: #071866;
+      text-transform: uppercase;
+      font-weight: 700; }
+    .download--ir .download__content .block-download .block-download--list .list-download {
+      padding: 15px 0 25px;
+      display: block; }
+      .download--ir .download__content .block-download .block-download--list .list-download .list-download__item {
+        margin-bottom: 0; }
+        .download--ir .download__content .block-download .block-download--list .list-download .list-download__item .btn--download {
+          padding: 0; }
+          .download--ir .download__content .block-download .block-download--list .list-download .list-download__item .btn--download .btn__icon .icon-download {
+            font-size: 50px; }
+          .download--ir .download__content .block-download .block-download--list .list-download .list-download__item .btn--download .btn__text {
+            font-size: 14px;
+            line-height: 24px; }
+            .download--ir .download__content .block-download .block-download--list .list-download .list-download__item .btn--download .btn__text span {
+              display: block; }
+            .download--ir .download__content .block-download .block-download--list .list-download .list-download__item .btn--download .btn__text .btn__text__main {
+              font-weight: 600;
+              color: #071866; }
+            .download--ir .download__content .block-download .block-download--list .list-download .list-download__item .btn--download .btn__text .btn__text__desc {
+              font-weight: 400;
+              color: #242424; }
+          .download--ir .download__content .block-download .block-download--list .list-download .list-download__item .btn--download:hover .btn__icon .icon-download {
+            color: #1294A6; }
+      .download--ir .download__content .block-download .block-download--list .list-download.list-download--default .list-download__item {
+        width: 100%;
+        padding-right: 0; }
+        .download--ir .download__content .block-download .block-download--list .list-download.list-download--default .list-download__item .btn--download {
+          width: 100%;
+          padding: 15px; }
+        .download--ir .download__content .block-download .block-download--list .list-download.list-download--default .list-download__item:hover .btn--download {
+          background: #FFFFFF 0% 0% no-repeat padding-box;
+          -webkit-box-shadow: 0px 0px 20px #00000029;
+          box-shadow: 0px 0px 20px #00000029; }
+          .download--ir .download__content .block-download .block-download--list .list-download.list-download--default .list-download__item:hover .btn--download .btn__text .btn__text__desc {
+            color: #071866; }
+    .download--ir .download__content .block-download .block-download--list:last-child {
+      border-bottom: none;
+      margin-bottom: 0; }
+  @media only screen and (max-width: 575px) {
+    .download--ir .download__content .block-download.block-download--highlight {
+      padding: 15px 20px; } }
