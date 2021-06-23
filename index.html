@@ -13,12 +13,23 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&family=Kanit&family=Prompt:wght@400;500;600&display=swap" rel="stylesheet">
 
+    <!-- cdn jquery version -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
     <!-- css webdefault -->
     <link rel="stylesheet" href="https://www.saintmed.com/themes/default/assets/vendor.2e0d946c44912d00f027.css">
     <link rel="stylesheet" href="https://www.saintmed.com/themes/default/assets/theme.360f611636a675837d03.css">
-    <link rel="stylesheet" href="https://www.saintmed.com/themes/default/assets/cookie.5d6bcd4f7d9e343d2997.css">
     
     <link rel="stylesheet" href="assets/css/ir-style.css">
+
+    <!-- Chart -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.1.0/echarts.min.js" integrity="sha512-W7jN6TS8p1Qwh4GSXsXh0tWSdAXN4v0MEgq9uOsYcz8A/KxzSPzBL1jDPErfgKUMb11QV2BknSzY/HltjLKPfg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="assets/vendor/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/vendor/slick/slick-theme.css"/>
+    <script src="assets/vendor/slick/slick.min.js"></script>
 
 </head>
 <body>
@@ -219,22 +230,23 @@
                         <div class="home-ir-stock-price">
                             <div class="stock-price--head">
                                 <div class="row justify-content-between align-items-center">
-                                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col">
                                         <h2 class="stock-price__title">Stock Price</h2>
                                     </div>
-                                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4">
-                                        <a href="#" class="link-more link-more__white">
-                                            <div class="link-more__text">Stock Quotes</div>
+                                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-auto text-right">
+                                        <a href="/th/updates/activities" class="btn btn--link btn--link__white"> 
+                                            <span class="btn__text">Stock Quotes </span> 
+                                            <span class="btn__icon"><i class="icon-arrow-right"></i></span> 
                                         </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="stock-price--body">
                                 <div class="row align-items-center">
-                                    <div class="col-xl-4 col-lg-4 col-md-12">
+                                    <div class="col-xl-4 col-lg-3 col-md-12">
                                         <div class="stock-price--highlight">SMD 18.40 <span>THB</span></div>
                                     </div>
-                                    <div class="col-xl-8 col-lg-8 col-md-12">
+                                    <div class="col-xl-8 col-lg-9 col-md-12">
                                         <div class="row">
                                             <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
                                                 <div class="stock-price--item">
@@ -278,9 +290,147 @@
                 </section>
 
 
-                <section style="height: 1000px;">
+                <section class="chart chart--financial">
                     <div class="container">
                         <div class="row">
+                            <div class="col-12">
+                                <div class="chart__header">
+                                    <div class="row justify-content-between">
+                                        <div class="col-lg-6 col">
+                                            <h2 class="darkblue2 uppercase">Financial highlights</h2>
+                                        </div>
+                                        <div class="col-lg-5 col-auto text-right">
+                                            <a href="" class="btn btn--link"> 
+                                                <span class="btn__text">VIEW ALL </span> 
+                                                <span class="btn__icon"><i class="icon-arrow-right"></i></span> 
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chart__body">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-6 text-center mb-4 mb-lg-0">
+                                            <div class="font-weight-bold text-uppercase text-darkblue-2">
+                                                Total Assets
+                                            </div>
+                                            <div class="echarts" id="chart_Assets"></div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 text-center mb-4 mb-lg-0">
+                                            <div class="font-weight-bold text-uppercase text-darkblue-2">
+                                                Total Revenue
+                                            </div>
+                                            <div class="echarts" id="chart_Revenues"></div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 text-center mb-4 mb-lg-0">
+                                            <div class="font-weight-bold text-uppercase text-darkblue-2">
+                                                Net Profit
+                                            </div>
+                                            <div class="echarts" id="chart_Profit"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="announce-calendar bg-image bg-color" style="background-image: url('assets/images/banner/banner-home.jpg');">
+                    <div class="announce-calendar-inner bg-left-top bg-right-bottom">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="box-item box-item--slide">
+                                        <div class="box-item__header">
+                                            <div class="row justify-content-between">
+                                                <div class="col-xl-6 col-lg-8 col">
+                                                    <h3 class="blue2 uppercase">Latest Announcement</h3>
+                                                </div>
+                                                <div class="col-xl-5 col-lg-4 col-auto text-right">
+                                                    <a href="" class="btn btn--link btn--link__white"> 
+                                                        <span class="btn__text">VIEW ALL </span> 
+                                                        <span class="btn__icon"><i class="icon-arrow-right"></i></span> 
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="box-item__body slick-container" id="list_announcement">
+                                            <div class="list-item px-5 py-4">
+                                                <div class="text__date">09/12/20</div>
+                                                <div class="text__title">
+                                                    1. Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Donec tristique felis eu lacinia auctor…
+                                                </div>
+                                                <a href="#" class="btn btn--border-circle btn--animate"> 
+                                                    <span class="btn__icon"><i class="icon-arrow-right"></i></span> 
+                                                    <span class="btn__text uppercase">read more</span> 
+                                                </a>
+                                            </div>
+                                            <div class="list-item px-5 py-4">
+                                                <div class="text__date">09/12/20</div>
+                                                <div class="text__title">
+                                                    2. Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Donec tristique felis eu lacinia auctor…
+                                                </div>
+                                                <a href="#" class="btn btn--border-circle btn--animate"> 
+                                                    <span class="btn__icon"><i class="icon-arrow-right"></i></span> 
+                                                    <span class="btn__text uppercase">read more</span> 
+                                                </a>
+                                            </div>
+                                            <div class="list-item px-5 py-4">
+                                                <div class="text__date">09/12/20</div>
+                                                <div class="text__title">
+                                                    3. Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Donec tristique felis eu lacinia auctor…
+                                                </div>
+                                                <a href="#" class="btn btn--border-circle btn--animate"> 
+                                                    <span class="btn__icon"><i class="icon-arrow-right"></i></span> 
+                                                    <span class="btn__text uppercase">read more</span> 
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="slick-progress">
+                                            <div class="progress"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="box-item">
+                                        <div class="box-item__header">
+                                            <div class="row justify-content-between">
+                                                <div class="col-lg-6 col">
+                                                    <h3 class="blue2 uppercase">IR CALENDAR</h3>
+                                                </div>
+                                                <div class="col-lg-5 col-auto text-right">
+                                                    <a href="" class="btn btn--link btn--link__white"> 
+                                                        <span class="btn__text">VIEW ALL </span> 
+                                                        <span class="btn__icon"><i class="icon-arrow-right"></i></span> 
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="box-item__body box-item--calendar">
+                                            <div class="date-calendar">
+                                                <div class="content">
+                                                    <div class="d">09</div>
+                                                    <div class="m-y">12/21</div>
+                                                    <div class="icon_calendar">
+                                                        <i class="f-icon icon-calendar"></i>
+                                                        <i class="f-icon icon-calendar-plus"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="event-calendar">
+                                                <div class="event-title">Analyst Meeting Q1/2021</div>
+                                                <div class="event-time">
+                                                    <div class="text">Time:</div>
+                                                    <div class="desc">10.00-11.00</div>
+                                                </div>
+                                                <div class="event-time">
+                                                    <div class="text">Venue:</div>
+                                                    <div class="desc">Location Lorem ipsum dolore medeta mrt am boharen meta</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -402,8 +552,11 @@
     <!-- JS webdefault -->
     <script src="https://www.saintmed.com/themes/default/assets/vendor.bcc2febf1145e9f85f86.js"></script>
     <script src="https://www.saintmed.com/themes/default/assets/theme.296df53f090159470a9e.js"></script>
-    <script src="https://www.saintmed.com/themes/default/assets/cookie.159c543a5f171c085e5f.js"></script>
 
+    <!-- Echart -->
+    <script src="assets/js/echart.js"></script>
 
+    <!-- Slick -->
+    <script src="assets/js/slick.js"></script>
 </body>
 </html>

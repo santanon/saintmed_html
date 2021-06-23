@@ -25,9 +25,23 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+.icon-calendar:before {
+  content: "\e902";
+}
+.icon-calendar-plus:before {
+  content: "\e905";
+}
+.icon-arrow-slide-prev:before {
+  content: "\e903";
+}
+.icon-arrow-slide-next:before {
+  content: "\e904";
+}
 .icon-arrow-download:before {
   content: "\e900";
 }
 .icon-file-download:before {
   content: "\e901";
 }
+
