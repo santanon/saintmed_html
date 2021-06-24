@@ -27,21 +27,27 @@
 
 
 .icon-calendar:before {
-  content: "\e902";
-}
-.icon-calendar-plus:before {
-  content: "\e905";
-}
-.icon-arrow-slide-prev:before {
-  content: "\e903";
-}
-.icon-arrow-slide-next:before {
-  content: "\e904";
-}
-.icon-arrow-download:before {
   content: "\e900";
 }
-.icon-file-download:before {
+.icon-calendar-plus:before {
+  content: "\e902";
+}
+.icon-arrow-download:before {
   content: "\e901";
+}
+.icon-arrow-slide-next:before {
+  content: "\e903";
+}
+.icon-arrow-slide-prev:before {
+  content: "\e904";
+}
+.icon-file-download:before {
+  content: "\e906";
+}
+.icon-filing:before {
+  content: "\e907";
+}
+.icon-view-online:before {
+  content: "\e908";
 }
 

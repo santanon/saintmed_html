@@ -31,6 +31,10 @@
     <link rel="stylesheet" type="text/css" href="assets/vendor/slick/slick-theme.css"/>
     <script src="assets/vendor/slick/slick.min.js"></script>
 
+    <!-- aos -->
+    <link rel="stylesheet" type="text/css" href="assets/vendor/aos/aos.css"/>
+    <script src="assets/vendor/aos/aos.js"></script>
+
 </head>
 <body>
 
@@ -228,20 +232,20 @@
                 
                     <div class="home-banner__bottom">
                         <div class="home-ir-stock-price">
-                            <div class="stock-price--head">
-                                <div class="row justify-content-between align-items-center">
+                            <div class="stock-price__head">
+                                <div class="row justify-content-between">
                                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col">
                                         <h2 class="stock-price__title">Stock Price</h2>
                                     </div>
                                     <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-auto text-right">
-                                        <a href="/th/updates/activities" class="btn btn--link btn--link__white"> 
+                                        <a href="#" class="btn btn--link btn--link__white"> 
                                             <span class="btn__text">Stock Quotes </span> 
                                             <span class="btn__icon"><i class="icon-arrow-right"></i></span> 
                                         </a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="stock-price--body">
+                            <div class="stock-price__body">
                                 <div class="row align-items-center">
                                     <div class="col-xl-4 col-lg-3 col-md-12">
                                         <div class="stock-price--highlight">SMD 18.40 <span>THB</span></div>
@@ -276,7 +280,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="stock-price--footer">
+                            <div class="stock-price__footer">
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="stock-price--lastupdate">
@@ -289,8 +293,7 @@
                     </div>
                 </section>
 
-
-                <section class="chart chart--financial">
+                <section class="home-financial">
                     <div class="container">
                         <div class="row">
                             <div class="col-12">
@@ -334,7 +337,7 @@
                     </div>
                 </section>
 
-                <section class="announce-calendar bg-image bg-color" style="background-image: url('assets/images/banner/banner-home.jpg');">
+                <section class="home-announce-calendar bg-image bg-color" style="background-image: url('assets/images/bg/bg-home-announcement.jpg');">
                     <div class="announce-calendar-inner bg-left-top bg-right-bottom">
                         <div class="container">
                             <div class="row">
@@ -354,7 +357,7 @@
                                             </div>
                                         </div>
                                         <div class="box-item__body slick-container" id="list_announcement">
-                                            <div class="list-item px-5 py-4">
+                                            <div class="list-item px-lg-5 px-sm-4 px-3 py-lg-4 py-sm-4 py-3">
                                                 <div class="text__date">09/12/20</div>
                                                 <div class="text__title">
                                                     1. Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Donec tristique felis eu lacinia auctor…
@@ -364,7 +367,7 @@
                                                     <span class="btn__text uppercase">read more</span> 
                                                 </a>
                                             </div>
-                                            <div class="list-item px-5 py-4">
+                                            <div class="list-item px-lg-5 px-sm-4 px-3 py-lg-4 py-sm-4 py-3">
                                                 <div class="text__date">09/12/20</div>
                                                 <div class="text__title">
                                                     2. Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Donec tristique felis eu lacinia auctor…
@@ -374,7 +377,7 @@
                                                     <span class="btn__text uppercase">read more</span> 
                                                 </a>
                                             </div>
-                                            <div class="list-item px-5 py-4">
+                                            <div class="list-item px-lg-5 px-sm-4 px-3 py-lg-4 py-sm-4 py-3">
                                                 <div class="text__date">09/12/20</div>
                                                 <div class="text__title">
                                                     3. Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Donec tristique felis eu lacinia auctor…
@@ -435,6 +438,156 @@
                     </div>
                 </section>
 
+                <section class="home-download bg-image bg-color" style="background-image: url('assets/images/bg/bg-home-download.jpg');">
+                    <div class="container">
+                        <div class="download-inner">
+                            <div class="download__wrapper">
+                                <div class="row">
+                                    <div class="col-12 mb-3">
+                                        <h2 class="darkblue2 uppercase">Quick Download</h2>
+                                    </div>
+                                </div>
+                                <div class="row align-items-stretch">
+                                    <div class="col-lg-5">
+                                        <div class="box-download box-download--left">
+                                            <div class="box-download__highlight">
+                                                <div class="highlight__image">
+                                                    <img src="assets/images/img-onereport.png" alt="" />
+                                                </div>
+                                                <div class="highlight__link">
+                                                    <div class="highlight__header">
+                                                        Form 56-1 One Report 2020
+                                                    </div>
+                                                    <div class="highlight__body">
+                                                        <div class="item">
+                                                            <a href="#" class="btn btn--download">
+                                                                <span class="btn__icon">
+                                                                    <i class="f-icon icon-arrow-download"></i>
+                                                                    <i class="f-icon icon-file-download"></i>
+                                                                </span>
+                                                                <span class="btn__text">Download</span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="item">
+                                                            <a href="#" class="btn btn--iconlink">
+                                                                <span class="btn__icon">
+                                                                    <i class="f-icon icon-view-online"></i>
+                                                                </span>
+                                                                <span class="btn__text">View Online</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <div class="box-download box-download--right">
+                                            <div class="list-download list-download--default">
+                                                <div class="row justify-content-center">
+                                                    <div class="col-lg-6 col-md-6 col-sm-6 col-12 mb-lg-3">
+                                                        <div class="list-download__item">
+                                                            <a href="#" class="btn btn--download">
+                                                                <span class="btn__icon">
+                                                                    <i class="f-icon icon-arrow-download"></i>
+                                                                    <i class="f-icon icon-file-download"></i>
+                                                                </span>
+                                                                <div class="btn__text">
+                                                                    <span class="btn__text__main">Financial Statement</span>
+                                                                    <span class="btn__text__desc">Quarter 1/2021</span>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6 col-12 mb-lg-3">
+                                                        <div class="list-download__item">
+                                                            <a href="#" class="btn btn--download">
+                                                                <span class="btn__icon">
+                                                                    <i class="f-icon icon-arrow-download"></i>
+                                                                    <i class="f-icon icon-file-download"></i>
+                                                                </span>
+                                                                <div class="btn__text">
+                                                                    <span class="btn__text__main">MD&A</span>
+                                                                    <span class="btn__text__desc">Yearly 2020</span>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6 col-12 mb-sm-2 mb-lg-3">
+                                                        <div class="list-download__item">
+                                                            <a href="#" class="btn btn--download">
+                                                                <span class="btn__icon">
+                                                                    <i class="f-icon icon-arrow-download"></i>
+                                                                    <i class="f-icon icon-file-download"></i>
+                                                                </span>
+                                                                <div class="btn__text">
+                                                                    <span class="btn__text__main">Presentation</span>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6 col-12 mb-lg-3">
+                                                        <div class="list-download__item">
+                                                            <a href="#" class="btn btn--filing">
+                                                                <span class="btn__icon">
+                                                                    <i class="f-icon icon-filing"></i>
+                                                                </span>
+                                                                <div class="btn__text">
+                                                                    <span class="btn__text__main">Filing</span>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="investor__wrapper">
+                                <div class="row no-gutters">
+                                    <div class="col-lg-9 col-md-9 col-sm-8 col">
+                                        <div class="investor__content">
+                                            <div class="text-main">INVESTOR KITS</div>
+                                            <div class="text-desc">Key financial info can easily be accessed in our Investor kits.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-4 col-auto">
+                                        <div class="investor__viewall">
+                                            <a href="#">
+                                                VIEW ALL
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="home-email bg-color bg-footer-left bg-footer-right">
+                    <div class="email-inner">
+                        <div class="container">
+                            <div class="row justify-content-between align-items-start">
+                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                    <h2 class="darkblue2 uppercase">Email AlertS</h2>
+                                </div>
+                                <div class="col-lg-4 col-md-8 col-sm-6">
+                                    <p>
+                                        Keep yourself up to date with all the latest announcements from the company.
+                                    </p>
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-4">
+                                    <button class="btn btn--custom btn--primary">
+                                        Subscribe
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 
             </article>
         </main>
@@ -541,13 +694,9 @@
     </div>
 
 
-
-
-    
-
-    <!-- cdn jquery version -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script>
+        AOS.init();
+    </script>
 
     <!-- JS webdefault -->
     <script src="https://www.saintmed.com/themes/default/assets/vendor.bcc2febf1145e9f85f86.js"></script>

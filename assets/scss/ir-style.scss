@@ -1,5 +1,31 @@
 @import './_fonts';
+@import './_global';
 
+@-webkit-keyframes FadeRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-80px);
+        transform: translateX(-80px)
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+}
+
+@keyframes FadeRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-80px);
+        transform: translateX(-80px)
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+}
 //home
 .home-body{
     .home-banner--ir{
@@ -76,6 +102,10 @@
             }
         }
         .home-banner__bottom{
+            position: relative;
+            z-index: 9;
+            -webkit-animation: FadeRight 1s;
+            animation: FadeRight 1s;
             .home-ir-stock-price{
                 z-index: 190;
                 position: absolute;
@@ -84,7 +114,7 @@
                 left: 0;
                 background: rgba(14,53,116,.86);
                 padding: 50px 40px 10px 92px;
-                .stock-price--head{
+                .stock-price__head{
                     .stock-price__title{
                         font-weight: 700;
                         font-size: 2rem;
@@ -95,7 +125,7 @@
                         text-align: right;
                     }
                 }
-                .stock-price--body{
+                .stock-price__body{
                     padding: 10px 0;
                     .stock-price--highlight{
                         font-weight: 600;
@@ -116,7 +146,7 @@
                         }
                     }
                 }
-                .stock-price--footer{
+                .stock-price__footer{
                     .stock-price--lastupdate{
                         font-size: 0.75rem;
                         line-height: 1.6875rem;
@@ -129,14 +159,14 @@
         }
     }
 
-    .chart--financial{
+    .home-financial{
         padding: 130px 0;
         .chart__body{
             padding-top: 60px;
         }
     }
 
-    .announce-calendar{
+    .home-announce-calendar{
         position: relative;
         overflow: hidden;
         &.bg-image{
@@ -195,7 +225,7 @@
                     display: block;
                     position: absolute;
                     bottom: 0;
-                    right: 0;
+                    right: -130px;
                     z-index: -1;
                     background-image: url('../images/bg/svg-2.svg');
                     background-repeat: no-repeat;
@@ -204,7 +234,6 @@
                     height: 217px;
                 }
             }
-
             .box-item{
                 .box-item__body{
                     margin-top: 30px;
@@ -307,11 +336,12 @@
                                     }
                                     .icon-calendar-plus{
                                         position: absolute;
-                                        font-size: 10px;
+                                        font-size: 14px;
                                         bottom: 10px;
-                                        right: 3px;
+                                        right: 2px;
                                         transition: all 0.2s ease-in-out;
                                         transform: rotate(0deg);
+                                        //transform-origin: center center;
                                     }
                                 }
                             }
@@ -358,6 +388,7 @@
                                         .icon-calendar-plus{
                                             transition: all 0.2s ease-in-out;
                                             transform: rotate(90deg);
+                                            //transform-origin: center center;
                                         }
                                     }
                                 }
@@ -399,7 +430,7 @@
                             &.slick-prev{
                                 left: 0;
                                 &:before{
-                                    content: '\e903';
+                                    content: '\e904';
                                     font-family: 'icomoon';
                                     color: #fff;
                                     opacity: 1;
@@ -409,7 +440,7 @@
                                 right: auto;
                                 left: 220px;
                                 &:before{
-                                    content: '\e904';
+                                    content: '\e903';
                                     font-family: 'icomoon';
                                     color: #fff;
                                     opacity: 1;
@@ -437,6 +468,341 @@
         }
         
     }
+
+    .home-download{
+        position: relative;
+        overflow: hidden;
+        padding: 130px 0 120px;
+        &.bg-image{
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            width: 100%;
+        }
+        &.bg-color{
+            &:before{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 2;
+                width: 100%;
+                height: 100%;
+                background-color: rgba($color: #6D6D6D, $alpha: 0.07);
+            }
+        }
+
+        .download-inner{
+            background-color: #fff;
+            box-shadow: 0px 10px 10px #00000029;
+            position: relative;
+            z-index: 9;
+            .download__wrapper{
+                padding: 40px;
+                .box-download{
+                    padding: 10px 0;
+                    height: 100%;
+                    &.box-download--left{
+                        border-right: 1px solid rgba($color: #707070, $alpha: 0.1);
+                    }
+                    .box-download__highlight{
+                        display: flex;
+                        align-items: flex-start;
+                        .highlight__image{
+                            max-width: 150px;
+                            margin-right: 30px;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        .highlight__link{
+                            .highlight__header{
+                                font-size: 18px;
+                                line-height: 24px;
+                                color: #071866;
+                                font-weight: 600;
+                                margin-bottom: 15px;
+                            }
+                            .highlight__body{
+                                .item{
+                                    margin-bottom: 15px;
+                                    .btn{
+                                        .btn__icon{
+                                            padding: 0;
+                                            position: relative;
+                                            align-items: center;
+                                            align-self: center;
+                                            margin-right: 10px;
+                                            .f-icon{
+                                                color: #242424;
+                                            }
+                                        }
+                                        .btn__text{
+                                            font-size: 0.875rem;
+                                            line-height: 1.5rem;
+                                            font-weight: 400;
+                                        }
+                                        &.btn--download{
+                                            .btn__icon{
+                                                .f-icon{
+                                                    &.icon-arrow-download{
+                                                        font-size: 12px;
+                                                        position: absolute;
+                                                        top: 12px;
+                                                        transition: all 0.2s ease-in-out;
+                                                    }
+                                                    &.icon-file-download{
+                                                        font-size: 34px;
+                                                    }
+                                                }
+                                            }
+                                            &:hover{
+                                                .btn__icon{
+                                                    .f-icon{
+                                                        color: #1294A6;
+                                                        &.icon-arrow-download{
+                                                            top: 14px;
+                                                            transition: all 0.2s ease-in-out;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &.btn--iconlink{
+                                            .btn__icon{
+                                                margin-right: 16px;
+                                                .f-icon{
+                                                    &.icon-view-online{
+                                                        font-size: 28px;
+                                                    }
+                                                }
+                                            }
+                                            .btn__text{
+                                                text-transform: capitalize;
+                                            }
+                                            &:hover{
+                                                .btn__icon{
+                                                    .f-icon{
+                                                        color: #1294A6;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    &:last-child{
+                                        margin-bottom: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.box-download--right{
+                        .list-download{
+                            //padding: 15px 0 25px;
+                            display: block;
+                            .list-download__item{
+                                margin-bottom: 0;
+                                .btn{
+                                    align-items: flex-start;
+                                }
+                                .btn--download{
+                                    padding: 0;
+                                    .btn__icon{
+                                        position: relative;
+                                        margin-right: 10px;
+                                        .f-icon{
+                                            color: #242424;
+                                            &.icon-arrow-download{
+                                                font-size: 14px;
+                                                position: absolute;
+                                                top: 12px;
+                                                transition: all 0.2s ease-in-out;
+                                            }
+                                            &.icon-file-download{
+                                                font-size: 38px;
+                                            }
+                                        }
+                                    }
+                                    .btn__text{
+                                        font-size: 1rem;
+                                        line-height: 1.375rem;
+                                        span{
+                                            display: block;
+                                        }
+                                        .btn__text__main{
+                                            font-weight: 600;
+                                            color: #071866;
+                                        }
+                                        .btn__text__desc{
+                                            font-weight: 400;
+                                            color: #242424;
+                                        }
+                                    }
+                                    &:hover{
+                                        .btn__icon{
+                                            .f-icon{
+                                                color: #1294A6;
+                                                &.icon-arrow-download{
+                                                    top: 14px;
+                                                    transition: all 0.2s ease-in-out;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .btn--filing{
+                                    width: 100%;
+                                    padding: 15px;
+                                    display: flex;
+                                    .btn__icon{
+                                        position: relative;
+                                        margin-right: 10px;
+                                        .f-icon{
+                                            color: #242424;
+                                            &.icon-filing{
+                                                font-size: 38px;
+                                            }
+                                        }
+                                    }
+                                    .btn__text{
+                                        font-size: 1rem;
+                                        line-height: 1.5rem;
+                                        color: #071866;
+                                        margin-left: .5rem;
+                                    }
+                                    &:hover{
+                                        .btn__icon{
+                                            .f-icon{
+                                                color: #1294A6;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &.list-download--default{
+                                .list-download__item{
+                                    width: 100%;
+                                    padding-right: 0;
+                                    .btn--download{
+                                        width: 100%;
+                                        padding: 15px;
+                                        //background-color: #000;
+                                    }
+                                    
+                                    &:hover{
+                                        .btn--download, .btn--filing{
+                                            background: #FFFFFF 0% 0% no-repeat padding-box;
+                                            box-shadow: 0px 0px 20px #00000029;
+                                            .btn__text{
+                                                .btn__text__desc{
+                                                    color: #071866;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .investor__wrapper{
+                .investor__content{
+                    background-color: #FAFAFA;
+                    padding: 20px 100px 20px 40px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: space-between;
+                    .text-main{
+                        font-size: 1.125rem;
+                        line-height: 2.875rem;
+                        font-weight: 700;
+                        color: #111D53;
+                    }
+                    .text-desc{
+                        font-size: 1rem;
+                        line-height: 1.625rem;
+                        font-weight: 400;
+                        color: #6D6D6D;
+                    }
+                }
+                .investor__viewall{
+                    background-color: #1294A6;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 15px;
+                    a{
+                        font-size: 0.875rem;
+                        line-height: 1.125rem;
+                        font-weight: 400;
+                        color: #fff;
+                        &:hover{
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .home-email{
+        padding: 140px 0;
+        position: relative;
+        overflow: hidden;
+        &.bg-color{
+            background-color: #fff;
+        }
+        &.bg-footer-left{
+            &::after{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background-image: url('../images/bg/bg-footer-left.svg');
+                background-repeat: no-repeat;
+                background-position: left;
+                background-size: cover;
+                width: 426px;
+                height: 180px;
+                z-index: 1;
+            }
+            
+        }
+        &.bg-footer-right{
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                background-image: url('../images/bg/bg-footer-right.svg');
+                background-repeat: no-repeat;
+                background-position: right bottom;
+                background-size: auto;
+                width: 426px;
+                height: 100%;
+                z-index: 1;
+            }
+        }
+
+        .email-inner{
+            position: relative;
+            z-index: 2;
+            p{
+                font-size: 1rem;
+                line-height: 1.625rem;
+                color: #6D6D6D;
+                font-weight: 400;
+            }
+        }
+    }
+
+    
     
     @media only screen and (min-width: 1200px){
         .home-banner--ir{
@@ -465,7 +831,7 @@
                     transform: translateY(0);
                     position: relative;
                     background: rgba(14,53,116,1);
-                    .stock-price--body{
+                    .stock-price__body{
                         .stock-price--highlight{
                             font-size: 1.8rem;
                         }
@@ -500,12 +866,13 @@
                 }
             }
         }
-        .chart--financial{
+        .home-financial{
             padding: 60px 0;
         }
 
-        .announce-calendar{
+        .home-announce-calendar{
             .announce-calendar-inner{
+                padding: 60px 0;
                 .box-item{
                     margin-bottom: 40px;
                     .box-item__body{
@@ -514,12 +881,42 @@
                 }
             }
         }
+
+        .home-download{
+            padding: 60px 0;
+            .download-inner{
+                .download__wrapper{
+                    padding: 25px;
+                    .box-download{
+                        &.box-download--left{
+                            border-right: none;
+                            border-bottom: 1px solid rgba($color: #707070, $alpha: 0.1);
+                            padding-bottom: 20px;
+                        }
+                    }
+                }
+                .investor__wrapper{
+                    .investor__content{
+                        padding-right: 40px;
+                    }
+                }
+            }
+        }
+
+        .home-email{
+            padding: 60px 0;
+            .email-inner{
+                .btn--custom{
+                    margin-top: 20px;
+                }
+            }
+        }
     }
     @media only screen and (max-width: 767px){
         .home-banner--ir{
             .home-banner__bottom{
                 .home-ir-stock-price{
-                    .stock-price--body{
+                    .stock-price__body{
                         .stock-price--item{
                             margin-bottom: 20px;
                             .stock-price--item__text{
@@ -532,9 +929,28 @@
                 }
             }
         }
+        .home-email{
+            &.bg-footer-left{
+                &::after{
+                    display: none;
+                }
+            }
+        }
     }
     @media only screen and (max-width: 575px){
-        .announce-calendar{
+        .home-banner--ir{
+            .banner--item{
+                .text-banner{
+                    transform: translateX(15px);
+                }
+            }
+            .home-banner__bottom{
+                .home-ir-stock-price{
+                    padding: 30px 15px;
+                }
+            }
+        }
+        .home-announce-calendar{
             .announce-calendar-inner{
                 .box-item{
                     .box-item__body{
@@ -551,16 +967,73 @@
                 }
             }
         }
+        .home-download{
+            .download-inner{
+                .download__wrapper{
+                    .box-download{
+                        &.box-download--right{
+                            .list-download{
+                                .list-download__item{
+                                    .btn{
+                                        padding-left: 0 !important;
+                                        padding-right: 0 !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .investor__wrapper{
+                    .investor__content{
+                        padding: 20px;
+                        .text-main{
+                            line-height: 1.875rem;
+                        }
+                    }
+                }
+            }
+        }
     }
     @media only screen and (max-width: 320px){
-        .announce-calendar{
+        .home-banner--ir{
+            .home-banner__bottom{
+                .home-ir-stock-price{
+                    .stock-price__head{
+                        .row{
+                            flex-direction: column;
+                        }
+                    }
+                }
+            }
+        }
+        .home-financial{
+            .chart__header{
+                .row{
+                    flex-direction: column;
+                }
+            }
+        }
+        .home-announce-calendar{
             .announce-calendar-inner{
                 .box-item{
                     .box-item__header{
                         .row{
                             flex-direction: column;
-                            .text-right{
-                                text-align: left !important;
+                        }
+                    }
+                }
+            }
+        }
+        .home-download{
+            .download-inner{
+                .download__wrapper{
+                    .box-download{
+                        .box-download__highlight{
+                            flex-direction: column;
+                            .highlight__image{
+                                margin-left: auto;
+                                margin-right: auto;
+                                margin-bottom: 15px;
                             }
                         }
                     }
@@ -569,7 +1042,6 @@
         }
     }
 }
-
 
 .content{
     .content__body{
@@ -677,6 +1149,7 @@
                                 .btn__text{
                                     font-weight: 400;
                                     color: #fff;
+                                    align-self: center;
                                 }
                                 &:hover{
                                     .btn__icon{
@@ -742,12 +1215,13 @@
                     display: block;
                     .list-download__item{
                         margin-bottom: 0;
+                        .btn{
+                            align-items: flex-start;
+                        }
                         .btn--download{
                             padding: 0;
                             .btn__icon{
                                 position: relative;
-                                align-items: center;
-                                align-self: center;
                                 margin-right: 10px;
                                 .f-icon{
                                     color: #242424;
@@ -763,8 +1237,8 @@
                                 }
                             }
                             .btn__text{
-                                font-size: 0.875rem;
-                                line-height: 1.5rem;
+                                font-size: 1rem;
+                                line-height: 1.375rem;
                                 span{
                                     display: block;
                                 }
@@ -841,27 +1315,3 @@
     }
 }
 
-.btn--link{
-    &.btn--link__white{
-        .btn__text{
-            color: #fff;
-        }
-        .btn__icon{
-            .icon-arrow-right{
-                color: #fff;
-            }
-        }
-    }
-    &:hover{
-        &.btn--link__white{
-            .btn__text{
-                color: #24e0e0;
-            }
-            .btn__icon{
-                .icon-arrow-right{
-                    color: #24e0e0;
-                }
-            }
-        }
-    }
-}
