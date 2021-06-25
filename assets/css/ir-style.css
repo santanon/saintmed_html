@@ -43,6 +43,135 @@
 .icon-view-online:before {
   content: "\e908"; }
 
+.content .content__body {
+  position: relative;
+  padding: 5rem 0 8rem; }
+  .content .content__body.bg-footer-left::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: url("../images/bg/bg-footer-left.svg");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: auto;
+    width: 100%;
+    height: 180px;
+    z-index: -1; }
+  .content .content__body.bg-footer-right::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-image: url("../images/bg/bg-footer-right.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: auto;
+    width: 100%;
+    height: 298px;
+    z-index: -1; }
+  .content .content__body .block-text .block__item {
+    margin-bottom: 30px; }
+    .content .content__body .block-text .block__item .text-head {
+      font-size: 1.25rem;
+      line-height: 1.625rem;
+      font-weight: 700;
+      color: #111D53;
+      margin-bottom: 10px; }
+  .content .content__body .block-accordion .accordion .card {
+    border: none;
+    border-radius: 0;
+    margin-bottom: 15px;
+    overflow: visible; }
+    .content .content__body .block-accordion .accordion .card .card-header {
+      border: none;
+      padding: 0;
+      -webkit-box-shadow: 0px 3px 6px #0000000B;
+      box-shadow: 0px 3px 6px #0000000B; }
+      .content .content__body .block-accordion .accordion .card .card-header h2 .btn-link {
+        padding: 20px 30px;
+        width: 100%;
+        text-align: left;
+        font-size: 1rem;
+        line-height: 1.625rem;
+        font-weight: 700;
+        color: #071866;
+        text-transform: uppercase;
+        border-radius: 0;
+        position: relative;
+        background: transparent -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#FAFAFA)) 0% 0% no-repeat padding-box;
+        background: transparent -webkit-linear-gradient(top, #FFFFFF 0%, #FAFAFA 100%) 0% 0% no-repeat padding-box;
+        background: transparent -o-linear-gradient(top, #FFFFFF 0%, #FAFAFA 100%) 0% 0% no-repeat padding-box;
+        background: transparent linear-gradient(180deg, #FFFFFF 0%, #FAFAFA 100%) 0% 0% no-repeat padding-box;
+        border: 1px solid #E8E8E8;
+        -webkit-box-shadow: 0px 3px 6px #0000000B;
+        box-shadow: 0px 3px 6px #0000000B; }
+        .content .content__body .block-accordion .accordion .card .card-header h2 .btn-link span {
+          font-size: 1.25rem;
+          line-height: 1.625rem;
+          color: #1294A6;
+          font-weight: 700;
+          margin-right: 10px; }
+        .content .content__body .block-accordion .accordion .card .card-header h2 .btn-link:focus {
+          text-decoration: none !important; }
+        .content .content__body .block-accordion .accordion .card .card-header h2 .btn-link:hover {
+          background: #071866;
+          border: 1px solid #071866;
+          color: #fff;
+          text-decoration: none !important; }
+        .content .content__body .block-accordion .accordion .card .card-header h2 .btn-link[aria-expanded="true"] {
+          background: #071866;
+          border: 1px solid #071866;
+          color: #fff; }
+          .content .content__body .block-accordion .accordion .card .card-header h2 .btn-link[aria-expanded="true"] span {
+            color: #fff; }
+        .content .content__body .block-accordion .accordion .card .card-header h2 .btn-link::before {
+          content: '';
+          position: absolute;
+          display: block;
+          left: 0;
+          top: 0;
+          background-image: url("../images/bg-table-left.png");
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: left;
+          width: 100%;
+          height: 100%; }
+        .content .content__body .block-accordion .accordion .card .card-header h2 .btn-link:after {
+          content: '';
+          position: absolute;
+          display: block;
+          right: 0;
+          top: 0;
+          background-image: url("../images/bg-table.png");
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: right;
+          width: 100%;
+          height: 69px; }
+    .content .content__body .block-accordion .accordion .card .card-body {
+      background-color: #F7F7F7;
+      padding: 35px;
+      color: #000;
+      font-size: 1rem;
+      line-height: 1.625rem;
+      margin-top: 10px;
+      margin-bottom: 10px; }
+      .content .content__body .block-accordion .accordion .card .card-body ul {
+        margin: 0;
+        padding: 0; }
+        .content .content__body .block-accordion .accordion .card .card-body ul li {
+          list-style: none;
+          padding-left: 17px;
+          color: #000; }
+          .content .content__body .block-accordion .accordion .card .card-body ul li::before {
+            content: "\2022";
+            color: #1294A6;
+            font-weight: bold;
+            display: inline-block;
+            width: 12px;
+            margin-left: -1em; }
+
 .btn.btn--iconlink {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -560,13 +689,17 @@
               transition: all 0.2s ease-in-out; }
             .home-body .home-download .download-inner .download__wrapper .box-download .box-download__highlight .highlight__link .highlight__body .item .btn.btn--download .btn__icon .f-icon.icon-file-download {
               font-size: 34px; }
-            .home-body .home-download .download-inner .download__wrapper .box-download .box-download__highlight .highlight__link .highlight__body .item .btn.btn--download:hover .btn__icon .f-icon {
-              color: #1294A6; }
-              .home-body .home-download .download-inner .download__wrapper .box-download .box-download__highlight .highlight__link .highlight__body .item .btn.btn--download:hover .btn__icon .f-icon.icon-arrow-download {
-                top: 14px;
-                -webkit-transition: all 0.2s ease-in-out;
-                -o-transition: all 0.2s ease-in-out;
-                transition: all 0.2s ease-in-out; }
+            .home-body .home-download .download-inner .download__wrapper .box-download .box-download__highlight .highlight__link .highlight__body .item .btn.btn--download:hover {
+              color: #071866 !important; }
+              .home-body .home-download .download-inner .download__wrapper .box-download .box-download__highlight .highlight__link .highlight__body .item .btn.btn--download:hover .btn__icon .f-icon {
+                color: #071866; }
+                .home-body .home-download .download-inner .download__wrapper .box-download .box-download__highlight .highlight__link .highlight__body .item .btn.btn--download:hover .btn__icon .f-icon.icon-arrow-download {
+                  top: 14px;
+                  -webkit-transition: all 0.2s ease-in-out;
+                  -o-transition: all 0.2s ease-in-out;
+                  transition: all 0.2s ease-in-out; }
+              .home-body .home-download .download-inner .download__wrapper .box-download .box-download__highlight .highlight__link .highlight__body .item .btn.btn--download:hover .btn__text {
+                color: #071866 !important; }
             .home-body .home-download .download-inner .download__wrapper .box-download .box-download__highlight .highlight__link .highlight__body .item .btn.btn--iconlink .btn__icon {
               margin-right: 16px; }
               .home-body .home-download .download-inner .download__wrapper .box-download .box-download__highlight .highlight__link .highlight__body .item .btn.btn--iconlink .btn__icon .f-icon.icon-view-online {
@@ -574,7 +707,9 @@
             .home-body .home-download .download-inner .download__wrapper .box-download .box-download__highlight .highlight__link .highlight__body .item .btn.btn--iconlink .btn__text {
               text-transform: capitalize; }
             .home-body .home-download .download-inner .download__wrapper .box-download .box-download__highlight .highlight__link .highlight__body .item .btn.btn--iconlink:hover .btn__icon .f-icon {
-              color: #1294A6; }
+              color: #071866; }
+            .home-body .home-download .download-inner .download__wrapper .box-download .box-download__highlight .highlight__link .highlight__body .item .btn.btn--iconlink:hover .btn__text {
+              color: #071866; }
             .home-body .home-download .download-inner .download__wrapper .box-download .box-download__highlight .highlight__link .highlight__body .item:last-child {
               margin-bottom: 0; }
         .home-body .home-download .download-inner .download__wrapper .box-download.box-download--right .list-download {
@@ -851,34 +986,6 @@
       margin-left: auto;
       margin-right: auto;
       margin-bottom: 15px; } }
-
-.content .content__body {
-  position: relative;
-  padding: 5rem 0 8rem; }
-  .content .content__body.bg-footer-left::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-image: url("../images/bg/bg-footer-left.svg");
-    background-repeat: no-repeat;
-    background-position: left;
-    background-size: auto;
-    width: 100%;
-    height: 180px;
-    z-index: -1; }
-  .content .content__body.bg-footer-right::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background-image: url("../images/bg/bg-footer-right.svg");
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: auto;
-    width: 100%;
-    height: 298px;
-    z-index: -1; }
 
 .download--ir {
   position: relative; }
