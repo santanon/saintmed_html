@@ -26,6 +26,12 @@
 }
 
 
+.icon-arrow-circle-left:before {
+  content: "\e905";
+}
+.icon-arrow-circle-right:before {
+  content: "\e909";
+}
 .icon-calendar:before {
   content: "\e900";
 }
@@ -50,4 +56,3 @@
 .icon-view-online:before {
   content: "\e908";
 }
-

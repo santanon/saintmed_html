@@ -19,6 +19,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.icon-arrow-circle-left:before {
+  content: "\e905"; }
+
+.icon-arrow-circle-right:before {
+  content: "\e909"; }
+
 .icon-calendar:before {
   content: "\e900"; }
 
@@ -1056,6 +1062,12 @@
     .main--content .content__body {
       padding: 125px 0 100px 0; } }
 
+.main--content .content__wrapper {
+  padding: 45px 0; }
+  @media (min-width: 1200px) {
+    .main--content .content__wrapper {
+      padding: 80px 0; } }
+
 .main--content .table--shareholder thead tr th {
   border: none;
   text-align: center;
@@ -1216,5 +1228,132 @@
     line-height: 1.25rem;
     color: #6D6D6D; }
 
+.main--content .card--news {
+  border-radius: 0;
+  padding: 23px 25px 42px;
+  margin-bottom: 30.5px;
+  border-bottom: 1px solid #24e0e0;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 10px #0000001A;
+  box-shadow: 0px 0px 10px #0000001A;
+  -webkit-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  transition: all .3s ease-out; }
+  .main--content .card--news .card__title {
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #071866;
+    -webkit-transition: color .3s ease-out;
+    -o-transition: color .3s ease-out;
+    transition: color .3s ease-out; }
+  .main--content .card--news .card__date {
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 2.4375rem;
+    letter-spacing: 0.6px;
+    color: #1294A6;
+    -webkit-transition: color .3s ease-out;
+    -o-transition: color .3s ease-out;
+    transition: color .3s ease-out; }
+  .main--content .card--news:hover {
+    text-decoration: none;
+    background-color: #1294a6; }
+    .main--content .card--news:hover .card__title {
+      color: white; }
+    .main--content .card--news:hover .card__date {
+      color: white; }
+
+.main--content .form-group--text .form-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  padding: .5625rem 3rem .5625rem 1.5rem; }
+
+.main--content .form-group--text:after {
+  font-family: Font Awesome\ 5 Pro;
+  font-weight: 300;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  content: "\f002";
+  position: absolute;
+  bottom: 50%;
+  right: 1.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #1294a6;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%); }
+
 .main--content .text__note {
   font-size: 14px; }
+
+.main--content .pagination {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.main--content .pagination .page-item {
+  margin: 0 10px; }
+
+.main--content .pagination .page-item .page-link {
+  border: none;
+  background-color: white;
+  width: 43px;
+  height: 43px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0 2.5px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #6D6D6D; }
+  .main--content .pagination .page-item .page-link:hover {
+    color: #1294a6; }
+
+.main--content .pagination .page-item .page-link--prev {
+  font-size: 2.5rem !important; }
+
+@media (max-width: 991.98px) {
+  .main--content .pagination .page-item .page-link--prev {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; } }
+
+.main--content .pagination .page-item .page-link--next {
+  font-size: 2.5rem !important; }
+
+@media (max-width: 991.98px) {
+  .main--content .pagination .page-item .page-link--next {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; } }
+
+.main--content .pagination .page-item.disabled .page-link {
+  background-color: transparent;
+  border-color: transparent;
+  color: #939598; }
+
+.main--content .pagination .page-item.active .page-link {
+  color: #1294a6; }
+
+@media (max-width: 991.98px) {
+  .main--content .pagination .page-item.active .page-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; } }
