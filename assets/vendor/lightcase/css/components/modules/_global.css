@@ -1,0 +1,5 @@
+.lightcase-open body {
+  overflow: hidden; }
+  .lightcase-isMobileDevice .lightcase-open body {
+    max-width: 100%;
+    max-height: 100%; }
