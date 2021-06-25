@@ -33,21 +33,25 @@
                 z-index: -1;
             }
         }
-
-        .block-text{
-            .block__item{
-                margin-bottom: 30px;
-                .text-head{
-                    font-size: 1.25rem;
-                    line-height: 1.625rem;
-                    font-weight: 700;
-                    color: #111D53;
-                    margin-bottom: 10px;
-                }
-            }
-            
+        &--wrapper{
+            padding: 80px 0;
         }
-        .block-accordion{
+
+        .block{
+            .text-head{
+                font-size: 1.25rem;
+                line-height: 1.625rem;
+                font-weight: 700;
+                color: #111D53;
+                margin-bottom: 10px;
+            }
+        }
+        .block--text{
+            .block__item{
+                margin-bottom: 50px;
+            }
+        }
+        .block--accordion{
             .accordion{
                 .card{
                     border: none;
@@ -91,6 +95,9 @@
                                     border: 1px solid #071866;
                                     color: #fff;
                                     text-decoration: none !important;
+                                    &:after{
+                                        background-image: url('../images/bg-table-active.svg');
+                                    }
                                 }
                                 &[aria-expanded="true"]{
                                     background: #071866;
@@ -161,8 +168,382 @@
                 }
             }
         }
+        .block--table{
+            .table{
+                &--dividend{
+                    thead{
+                        tr{
+                            th{
+                                font-size: 1rem;
+                                line-height: 1.375rem;
+                                vertical-align: middle;
+                                text-align: center;
+                                &:first-child{
+                                    min-width: auto;
+                                    position: relative;
+                                    &:before{
+                                        content: "";
+                                        position: absolute;
+                                        width: 100%;
+                                        height: 100%;
+                                        top: 0;
+                                        left: 0;
+                                        z-index: 0;
+                                        background-image: url('../images/bg-table-left.png');
+                                        background-position: top left;
+                                        background-repeat: no-repeat;
+                                        //transform: rotate(180deg);
+                                    }
+                                }
+                                &:last-child{
+                                    background-color: #071866;
+                                }
+                            }
+                        }
+                    }
+                    tbody{
+                        tr{
+                            td{
+                                text-align: center;
+                                &:last-child{
+                                    background-color: inherit;
+                                }
+                            }
+                        }
+                    }
+                }
+                &--shareholder{
+                    thead{
+                        tr{
+                            th{
+                                border: none;
+                                text-align: center;
+                                vertical-align: middle;
+                                &:first-child{
+                                    position: relative;
+                                    min-width: 50px;
+            
+                                    &:before{
+                                        content: "";
+                                        position: absolute;
+                                        width: 100%;
+                                        height: 100%;
+                                        top: 0;
+                                        left: 0;
+                                        z-index: 0;
+                                        background-image: url('../images/bg-table-left.png');
+                                        background-position: top left;
+                                        background-repeat: no-repeat;
+                                        //transform: rotate(180deg);
+                                    }
+                                }
+            
+                                &:not(:first-child){
+                                    border-right: solid 1px white;
+                                }
+                            }
+                        }
+                    }
+            
+                    tbody{
+                        tr{
+                            td{
+                                &:nth-child(1){
+                                    text-align: center;
+                                }
+                                &:nth-child(2){
+                                    padding-left: 3rem;
+                                    text-align: left;
+                                }
+                                &:nth-child(3){
+                                    text-align: right;
+                                }
+                                &:nth-child(4){
+                                    color: #6D6D6D;
+                                    text-align: right;
+                                }
+            
+                                &:last-child:not([colspan]){
+                                    background-color: rgba($color: #1294A6, $alpha: 0.05);
+                                }
+                            }
+            
+                            &.table__highlight{
+                                background-color: rgba($color: #6D6D6D, $alpha: 0.05);
+                                td{
+                                    &:nth-child(2){
+                                        padding-left: .75rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+            
+                    tfoot{
+                        tr{
+                            td{
+                                &:nth-child(1){
+                                    text-align: center;
+                                }
+                                &:nth-child(2){
+                                    text-align: left;
+                                }
+                                &:nth-child(3){
+                                    text-align: right;
+                                }
+                                &:nth-child(4){
+                                    font-weight: 700;
+                                    color: #6D6D6D;
+                                    text-align: right;
+                                }
+                                &:last-child:not([colspan]){
+                                    background-color: rgba($color: #1294A6, $alpha: 0.05);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
 
-        @media only screen and (max-width: 992px){
+
+        .download--ir{
+            position: relative;
+            .download__cover{
+                position: absolute;
+                left: 0;
+                width: 60%;
+                height: 100%;
+                
+                background-size: cover;
+                background-position: 50%;
+                //z-index: -1;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    z-index: 1;
+                    width: 100%;
+                    height: 100%;
+                    //background-color: rgba(7,24,102,.13);
+                }
+            }
+            .download__content{
+                position: relative;
+                z-index: 9;
+                .block-download{
+                    &.block-download--highlight{
+                        background: #0E3574 0% 0% no-repeat padding-box;
+                        box-shadow: 0px 5px 30px #0000001F;
+                        padding: 30px 40px;
+                        position: relative;
+                        z-index: 1;
+                        min-height: 280px;
+                        .block-download--list{
+                            border-bottom: 1px solid rgba(255, 255, 255, .2);
+                            margin-bottom: 15px;
+                            padding-bottom: 20px;
+                            .block-download__title{
+                                font-size: 1.25rem;
+                                line-height: 1.375rem;
+                                color: #24E0E0;
+                            }
+                            .block-download__year{
+                                font-size: 1rem;
+                                line-height: 2.875rem;
+                                color: #fff;
+                            }
+                            .list-download{
+                                padding: 0;
+                                .list-download__item{
+                                    margin-bottom: 0;
+                                    .btn--download{
+                                        padding: 0;
+                                        .btn__icon{
+                                            margin-right: 10px;
+                                            .f-icon{
+                                                &.icon-arrow-download{
+                                                    font-size: 8px;
+                                                    position: absolute;
+                                                    top: 9px;
+                                                    color: #fff;
+                                                }
+                                                &.icon-file-download{
+                                                    color: #fff;
+                                                    font-size: 30px;
+                                                }
+                                            }
+                                        }
+                                        .btn__text{
+                                            font-weight: 400;
+                                            color: #fff;
+                                            align-self: center;
+                                        }
+                                        &:hover{
+                                            .btn__icon{
+                                                .f-icon{
+                                                    &.icon-arrow-download{
+                                                        top: 11px;
+                                                        color: #24e0e0;
+                                                    }
+                                                    &.icon-file-download{
+                                                        color: #24e0e0;
+                                                        font-size: 30px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &:last-child{
+                                padding-bottom: 0;
+                                margin-bottom: 0;
+                            }
+                        }
+                        &:after{
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            z-index: -1;
+                            display: block;
+                            background-image: url('../images/bg/bg-ir-highlight.svg');
+                            background-repeat: no-repeat;
+                            background-size: auto;
+                            background-position: right;
+                            width: 100%;
+                            height: 189px;
+                            //opacity: .45;
+                        }
+                    }
+                    &.block-download__flexcenter{
+                        display: flex;
+                        align-items: center;
+                    }
+                    .block-download--list{
+                        border-bottom: 1px solid #707070;
+                        margin-bottom: 40px;
+                        .block-download__title{
+                            font-size: 1rem;
+                            line-height: 1.5rem;
+                            color: #1294A6;
+                            text-transform: uppercase;
+                            font-weight: 700;
+                        }
+                        .block-download__year{
+                            font-size: 1.625rem;
+                            line-height: 2.875rem;
+                            color: #071866;
+                            text-transform: uppercase;
+                            font-weight: 700;
+                        }
+                        .list-download{
+                            padding: 15px 0 25px;
+                            display: block;
+                            .list-download__item{
+                                margin-bottom: 0;
+                                .btn{
+                                    align-items: flex-start;
+                                }
+                                .btn--download{
+                                    padding: 0;
+                                    .btn__icon{
+                                        position: relative;
+                                        margin-right: 10px;
+                                        .f-icon{
+                                            color: #242424;
+                                            &.icon-arrow-download{
+                                                font-size: 14px;
+                                                position: absolute;
+                                                top: 12px;
+                                                transition: all 0.2s ease-in-out;
+                                            }
+                                            &.icon-file-download{
+                                                font-size: 38px;
+                                            }
+                                        }
+                                    }
+                                    .btn__text{
+                                        font-size: 1rem;
+                                        line-height: 1.375rem;
+                                        span{
+                                            display: block;
+                                        }
+                                        .btn__text__main{
+                                            font-weight: 600;
+                                            color: #071866;
+                                        }
+                                        .btn__text__desc{
+                                            font-weight: 400;
+                                            color: #242424;
+                                        }
+                                    }
+                                    &:hover{
+                                        .btn__icon{
+                                            .f-icon{
+                                                color: #1294A6;
+                                                &.icon-arrow-download{
+                                                    top: 14px;
+                                                    transition: all 0.2s ease-in-out;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &.list-download--default{
+                                .list-download__item{
+                                    width: 100%;
+                                    padding-right: 0;
+                                    .btn--download{
+                                        width: 100%;
+                                        padding: 15px;
+                                        //background-color: #000;
+                                    }
+                                    &:hover{
+                                        .btn--download{
+                                            background: #FFFFFF 0% 0% no-repeat padding-box;
+                                            box-shadow: 0px 0px 20px #00000029;
+                                            .btn__text{
+                                                .btn__text__desc{
+                                                    color: #071866;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &:last-child{
+                            border-bottom: none;
+                            //margin-bottom: 0;
+                        }
+                    }
+        
+                    @media only screen and (max-width: 575px){
+                        &.block-download--highlight{
+                            padding: 15px 20px;
+                        }
+                    }
+                }
+            }
+        
+            @media only screen and (max-width: 991px){
+                .download__cover{
+                    width: 100%;
+                }
+                .download__content{
+                    .block-download{
+                        &.block-download--highlight{
+                            background: rgba($color: #0E3574, $alpha: 0.88);
+                        }
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width: 991px){
             .block-accordion{
                 .accordion{
                     .card{

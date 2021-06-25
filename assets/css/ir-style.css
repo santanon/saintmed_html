@@ -76,25 +76,27 @@
     width: 100%;
     height: 298px;
     z-index: -1; }
-  .content .content__body .block-text .block__item {
-    margin-bottom: 30px; }
-    .content .content__body .block-text .block__item .text-head {
-      font-size: 1.25rem;
-      line-height: 1.625rem;
-      font-weight: 700;
-      color: #111D53;
-      margin-bottom: 10px; }
-  .content .content__body .block-accordion .accordion .card {
+  .content .content__body--wrapper {
+    padding: 80px 0; }
+  .content .content__body .block .text-head {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+    font-weight: 700;
+    color: #111D53;
+    margin-bottom: 10px; }
+  .content .content__body .block--text .block__item {
+    margin-bottom: 50px; }
+  .content .content__body .block--accordion .accordion .card {
     border: none;
     border-radius: 0;
     margin-bottom: 15px;
     overflow: visible; }
-    .content .content__body .block-accordion .accordion .card .card-header {
+    .content .content__body .block--accordion .accordion .card .card-header {
       border: none;
       padding: 0;
       -webkit-box-shadow: 0px 3px 6px #0000000B;
       box-shadow: 0px 3px 6px #0000000B; }
-      .content .content__body .block-accordion .accordion .card .card-header h2 .btn-link {
+      .content .content__body .block--accordion .accordion .card .card-header h2 .btn-link {
         padding: 20px 30px;
         width: 100%;
         text-align: left;
@@ -112,28 +114,30 @@
         border: 1px solid #E8E8E8;
         -webkit-box-shadow: 0px 3px 6px #0000000B;
         box-shadow: 0px 3px 6px #0000000B; }
-        .content .content__body .block-accordion .accordion .card .card-header h2 .btn-link span {
+        .content .content__body .block--accordion .accordion .card .card-header h2 .btn-link span {
           font-size: 1.25rem;
           line-height: 1.625rem;
           color: #1294A6;
           font-weight: 700;
           margin-right: 10px; }
-        .content .content__body .block-accordion .accordion .card .card-header h2 .btn-link:focus {
+        .content .content__body .block--accordion .accordion .card .card-header h2 .btn-link:focus {
           text-decoration: none !important; }
-        .content .content__body .block-accordion .accordion .card .card-header h2 .btn-link:hover {
+        .content .content__body .block--accordion .accordion .card .card-header h2 .btn-link:hover {
           background: #071866;
           border: 1px solid #071866;
           color: #fff;
           text-decoration: none !important; }
-        .content .content__body .block-accordion .accordion .card .card-header h2 .btn-link[aria-expanded="true"] {
+          .content .content__body .block--accordion .accordion .card .card-header h2 .btn-link:hover:after {
+            background-image: url("../images/bg-table-active.svg"); }
+        .content .content__body .block--accordion .accordion .card .card-header h2 .btn-link[aria-expanded="true"] {
           background: #071866;
           border: 1px solid #071866;
           color: #fff; }
-          .content .content__body .block-accordion .accordion .card .card-header h2 .btn-link[aria-expanded="true"] span {
+          .content .content__body .block--accordion .accordion .card .card-header h2 .btn-link[aria-expanded="true"] span {
             color: #fff; }
-          .content .content__body .block-accordion .accordion .card .card-header h2 .btn-link[aria-expanded="true"]:after {
+          .content .content__body .block--accordion .accordion .card .card-header h2 .btn-link[aria-expanded="true"]:after {
             background-image: url("../images/bg-table-active.svg"); }
-        .content .content__body .block-accordion .accordion .card .card-header h2 .btn-link::before {
+        .content .content__body .block--accordion .accordion .card .card-header h2 .btn-link::before {
           content: '';
           position: absolute;
           display: block;
@@ -145,7 +149,7 @@
           background-position: left;
           width: 100%;
           height: 100%; }
-        .content .content__body .block-accordion .accordion .card .card-header h2 .btn-link:after {
+        .content .content__body .block--accordion .accordion .card .card-header h2 .btn-link:after {
           content: '';
           position: absolute;
           display: block;
@@ -157,7 +161,7 @@
           background-position: right;
           width: 100%;
           height: 69px; }
-    .content .content__body .block-accordion .accordion .card .card-body {
+    .content .content__body .block--accordion .accordion .card .card-body {
       background-color: #F7F7F7;
       padding: 35px;
       color: #000;
@@ -165,21 +169,263 @@
       line-height: 1.625rem;
       margin-top: 10px;
       margin-bottom: 10px; }
-      .content .content__body .block-accordion .accordion .card .card-body ul {
+      .content .content__body .block--accordion .accordion .card .card-body ul {
         margin: 0;
         padding: 0; }
-        .content .content__body .block-accordion .accordion .card .card-body ul li {
+        .content .content__body .block--accordion .accordion .card .card-body ul li {
           list-style: none;
           padding-left: 17px;
           color: #000; }
-          .content .content__body .block-accordion .accordion .card .card-body ul li::before {
+          .content .content__body .block--accordion .accordion .card .card-body ul li::before {
             content: "\2022";
             color: #1294A6;
             font-weight: bold;
             display: inline-block;
             width: 12px;
             margin-left: -1em; }
-  @media only screen and (max-width: 992px) {
+  .content .content__body .block--table .table--dividend thead tr th {
+    font-size: 1rem;
+    line-height: 1.375rem;
+    vertical-align: middle;
+    text-align: center; }
+    .content .content__body .block--table .table--dividend thead tr th:first-child {
+      min-width: auto;
+      position: relative; }
+      .content .content__body .block--table .table--dividend thead tr th:first-child:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        background-image: url("../images/bg-table-left.png");
+        background-position: top left;
+        background-repeat: no-repeat; }
+    .content .content__body .block--table .table--dividend thead tr th:last-child {
+      background-color: #071866; }
+  .content .content__body .block--table .table--dividend tbody tr td {
+    text-align: center; }
+    .content .content__body .block--table .table--dividend tbody tr td:last-child {
+      background-color: inherit; }
+  .content .content__body .block--table .table--shareholder thead tr th {
+    border: none;
+    text-align: center;
+    vertical-align: middle; }
+    .content .content__body .block--table .table--shareholder thead tr th:first-child {
+      position: relative;
+      min-width: 50px; }
+      .content .content__body .block--table .table--shareholder thead tr th:first-child:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        background-image: url("../images/bg-table-left.png");
+        background-position: top left;
+        background-repeat: no-repeat; }
+    .content .content__body .block--table .table--shareholder thead tr th:not(:first-child) {
+      border-right: solid 1px white; }
+  .content .content__body .block--table .table--shareholder tbody tr td:nth-child(1) {
+    text-align: center; }
+  .content .content__body .block--table .table--shareholder tbody tr td:nth-child(2) {
+    padding-left: 3rem;
+    text-align: left; }
+  .content .content__body .block--table .table--shareholder tbody tr td:nth-child(3) {
+    text-align: right; }
+  .content .content__body .block--table .table--shareholder tbody tr td:nth-child(4) {
+    color: #6D6D6D;
+    text-align: right; }
+  .content .content__body .block--table .table--shareholder tbody tr td:last-child:not([colspan]) {
+    background-color: rgba(18, 148, 166, 0.05); }
+  .content .content__body .block--table .table--shareholder tbody tr.table__highlight {
+    background-color: rgba(109, 109, 109, 0.05); }
+    .content .content__body .block--table .table--shareholder tbody tr.table__highlight td:nth-child(2) {
+      padding-left: .75rem; }
+  .content .content__body .block--table .table--shareholder tfoot tr td:nth-child(1) {
+    text-align: center; }
+  .content .content__body .block--table .table--shareholder tfoot tr td:nth-child(2) {
+    text-align: left; }
+  .content .content__body .block--table .table--shareholder tfoot tr td:nth-child(3) {
+    text-align: right; }
+  .content .content__body .block--table .table--shareholder tfoot tr td:nth-child(4) {
+    font-weight: 700;
+    color: #6D6D6D;
+    text-align: right; }
+  .content .content__body .block--table .table--shareholder tfoot tr td:last-child:not([colspan]) {
+    background-color: rgba(18, 148, 166, 0.05); }
+  .content .content__body .download--ir {
+    position: relative; }
+    .content .content__body .download--ir .download__cover {
+      position: absolute;
+      left: 0;
+      width: 60%;
+      height: 100%;
+      background-size: cover;
+      background-position: 50%; }
+      .content .content__body .download--ir .download__cover::before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%; }
+    .content .content__body .download--ir .download__content {
+      position: relative;
+      z-index: 9; }
+      .content .content__body .download--ir .download__content .block-download.block-download--highlight {
+        background: #0E3574 0% 0% no-repeat padding-box;
+        -webkit-box-shadow: 0px 5px 30px #0000001F;
+        box-shadow: 0px 5px 30px #0000001F;
+        padding: 30px 40px;
+        position: relative;
+        z-index: 1;
+        min-height: 280px; }
+        .content .content__body .download--ir .download__content .block-download.block-download--highlight .block-download--list {
+          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+          margin-bottom: 15px;
+          padding-bottom: 20px; }
+          .content .content__body .download--ir .download__content .block-download.block-download--highlight .block-download--list .block-download__title {
+            font-size: 1.25rem;
+            line-height: 1.375rem;
+            color: #24E0E0; }
+          .content .content__body .download--ir .download__content .block-download.block-download--highlight .block-download--list .block-download__year {
+            font-size: 1rem;
+            line-height: 2.875rem;
+            color: #fff; }
+          .content .content__body .download--ir .download__content .block-download.block-download--highlight .block-download--list .list-download {
+            padding: 0; }
+            .content .content__body .download--ir .download__content .block-download.block-download--highlight .block-download--list .list-download .list-download__item {
+              margin-bottom: 0; }
+              .content .content__body .download--ir .download__content .block-download.block-download--highlight .block-download--list .list-download .list-download__item .btn--download {
+                padding: 0; }
+                .content .content__body .download--ir .download__content .block-download.block-download--highlight .block-download--list .list-download .list-download__item .btn--download .btn__icon {
+                  margin-right: 10px; }
+                  .content .content__body .download--ir .download__content .block-download.block-download--highlight .block-download--list .list-download .list-download__item .btn--download .btn__icon .f-icon.icon-arrow-download {
+                    font-size: 8px;
+                    position: absolute;
+                    top: 9px;
+                    color: #fff; }
+                  .content .content__body .download--ir .download__content .block-download.block-download--highlight .block-download--list .list-download .list-download__item .btn--download .btn__icon .f-icon.icon-file-download {
+                    color: #fff;
+                    font-size: 30px; }
+                .content .content__body .download--ir .download__content .block-download.block-download--highlight .block-download--list .list-download .list-download__item .btn--download .btn__text {
+                  font-weight: 400;
+                  color: #fff;
+                  -ms-flex-item-align: center;
+                  -ms-grid-row-align: center;
+                  align-self: center; }
+                .content .content__body .download--ir .download__content .block-download.block-download--highlight .block-download--list .list-download .list-download__item .btn--download:hover .btn__icon .f-icon.icon-arrow-download {
+                  top: 11px;
+                  color: #24e0e0; }
+                .content .content__body .download--ir .download__content .block-download.block-download--highlight .block-download--list .list-download .list-download__item .btn--download:hover .btn__icon .f-icon.icon-file-download {
+                  color: #24e0e0;
+                  font-size: 30px; }
+          .content .content__body .download--ir .download__content .block-download.block-download--highlight .block-download--list:last-child {
+            padding-bottom: 0;
+            margin-bottom: 0; }
+        .content .content__body .download--ir .download__content .block-download.block-download--highlight:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          display: block;
+          background-image: url("../images/bg/bg-ir-highlight.svg");
+          background-repeat: no-repeat;
+          background-size: auto;
+          background-position: right;
+          width: 100%;
+          height: 189px; }
+      .content .content__body .download--ir .download__content .block-download.block-download__flexcenter {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center; }
+      .content .content__body .download--ir .download__content .block-download .block-download--list {
+        border-bottom: 1px solid #707070;
+        margin-bottom: 40px; }
+        .content .content__body .download--ir .download__content .block-download .block-download--list .block-download__title {
+          font-size: 1rem;
+          line-height: 1.5rem;
+          color: #1294A6;
+          text-transform: uppercase;
+          font-weight: 700; }
+        .content .content__body .download--ir .download__content .block-download .block-download--list .block-download__year {
+          font-size: 1.625rem;
+          line-height: 2.875rem;
+          color: #071866;
+          text-transform: uppercase;
+          font-weight: 700; }
+        .content .content__body .download--ir .download__content .block-download .block-download--list .list-download {
+          padding: 15px 0 25px;
+          display: block; }
+          .content .content__body .download--ir .download__content .block-download .block-download--list .list-download .list-download__item {
+            margin-bottom: 0; }
+            .content .content__body .download--ir .download__content .block-download .block-download--list .list-download .list-download__item .btn {
+              -webkit-box-align: start;
+              -ms-flex-align: start;
+              align-items: flex-start; }
+            .content .content__body .download--ir .download__content .block-download .block-download--list .list-download .list-download__item .btn--download {
+              padding: 0; }
+              .content .content__body .download--ir .download__content .block-download .block-download--list .list-download .list-download__item .btn--download .btn__icon {
+                position: relative;
+                margin-right: 10px; }
+                .content .content__body .download--ir .download__content .block-download .block-download--list .list-download .list-download__item .btn--download .btn__icon .f-icon {
+                  color: #242424; }
+                  .content .content__body .download--ir .download__content .block-download .block-download--list .list-download .list-download__item .btn--download .btn__icon .f-icon.icon-arrow-download {
+                    font-size: 14px;
+                    position: absolute;
+                    top: 12px;
+                    -webkit-transition: all 0.2s ease-in-out;
+                    -o-transition: all 0.2s ease-in-out;
+                    transition: all 0.2s ease-in-out; }
+                  .content .content__body .download--ir .download__content .block-download .block-download--list .list-download .list-download__item .btn--download .btn__icon .f-icon.icon-file-download {
+                    font-size: 38px; }
+              .content .content__body .download--ir .download__content .block-download .block-download--list .list-download .list-download__item .btn--download .btn__text {
+                font-size: 1rem;
+                line-height: 1.375rem; }
+                .content .content__body .download--ir .download__content .block-download .block-download--list .list-download .list-download__item .btn--download .btn__text span {
+                  display: block; }
+                .content .content__body .download--ir .download__content .block-download .block-download--list .list-download .list-download__item .btn--download .btn__text .btn__text__main {
+                  font-weight: 600;
+                  color: #071866; }
+                .content .content__body .download--ir .download__content .block-download .block-download--list .list-download .list-download__item .btn--download .btn__text .btn__text__desc {
+                  font-weight: 400;
+                  color: #242424; }
+              .content .content__body .download--ir .download__content .block-download .block-download--list .list-download .list-download__item .btn--download:hover .btn__icon .f-icon {
+                color: #1294A6; }
+                .content .content__body .download--ir .download__content .block-download .block-download--list .list-download .list-download__item .btn--download:hover .btn__icon .f-icon.icon-arrow-download {
+                  top: 14px;
+                  -webkit-transition: all 0.2s ease-in-out;
+                  -o-transition: all 0.2s ease-in-out;
+                  transition: all 0.2s ease-in-out; }
+          .content .content__body .download--ir .download__content .block-download .block-download--list .list-download.list-download--default .list-download__item {
+            width: 100%;
+            padding-right: 0; }
+            .content .content__body .download--ir .download__content .block-download .block-download--list .list-download.list-download--default .list-download__item .btn--download {
+              width: 100%;
+              padding: 15px; }
+            .content .content__body .download--ir .download__content .block-download .block-download--list .list-download.list-download--default .list-download__item:hover .btn--download {
+              background: #FFFFFF 0% 0% no-repeat padding-box;
+              -webkit-box-shadow: 0px 0px 20px #00000029;
+              box-shadow: 0px 0px 20px #00000029; }
+              .content .content__body .download--ir .download__content .block-download .block-download--list .list-download.list-download--default .list-download__item:hover .btn--download .btn__text .btn__text__desc {
+                color: #071866; }
+        .content .content__body .download--ir .download__content .block-download .block-download--list:last-child {
+          border-bottom: none; }
+      @media only screen and (max-width: 575px) {
+        .content .content__body .download--ir .download__content .block-download.block-download--highlight {
+          padding: 15px 20px; } }
+    @media only screen and (max-width: 991px) {
+      .content .content__body .download--ir .download__cover {
+        width: 100%; }
+      .content .content__body .download--ir .download__content .block-download.block-download--highlight {
+        background: rgba(14, 53, 116, 0.88); } }
+  @media only screen and (max-width: 991px) {
     .content .content__body .block-accordion .accordion .card .card-header h2 .btn-link {
       padding: 15px; }
       .content .content__body .block-accordion .accordion .card .card-header h2 .btn-link:after {
@@ -1001,176 +1247,6 @@
       margin-right: auto;
       margin-bottom: 15px; } }
 
-.download--ir {
-  position: relative; }
-  .download--ir .download__cover {
-    position: absolute;
-    left: 0;
-    width: 60%;
-    height: 100%;
-    background-size: cover;
-    background-position: 50%; }
-    .download--ir .download__cover::before {
-      content: "";
-      position: absolute;
-      z-index: 1;
-      width: 100%;
-      height: 100%; }
-  .download--ir .download__content {
-    position: relative;
-    z-index: 9; }
-    .download--ir .download__content .block-download.block-download--highlight {
-      background: #0E3574 0% 0% no-repeat padding-box;
-      -webkit-box-shadow: 0px 5px 30px #0000001F;
-      box-shadow: 0px 5px 30px #0000001F;
-      padding: 30px 40px;
-      position: relative;
-      z-index: 1;
-      min-height: 280px; }
-      .download--ir .download__content .block-download.block-download--highlight .block-download--list {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        margin-bottom: 15px;
-        padding-bottom: 20px; }
-        .download--ir .download__content .block-download.block-download--highlight .block-download--list .block-download__title {
-          font-size: 1.25rem;
-          line-height: 1.375rem;
-          color: #24E0E0; }
-        .download--ir .download__content .block-download.block-download--highlight .block-download--list .block-download__year {
-          font-size: 1rem;
-          line-height: 2.875rem;
-          color: #fff; }
-        .download--ir .download__content .block-download.block-download--highlight .block-download--list .list-download {
-          padding: 0; }
-          .download--ir .download__content .block-download.block-download--highlight .block-download--list .list-download .list-download__item {
-            margin-bottom: 0; }
-            .download--ir .download__content .block-download.block-download--highlight .block-download--list .list-download .list-download__item .btn--download {
-              padding: 0; }
-              .download--ir .download__content .block-download.block-download--highlight .block-download--list .list-download .list-download__item .btn--download .btn__icon {
-                margin-right: 10px; }
-                .download--ir .download__content .block-download.block-download--highlight .block-download--list .list-download .list-download__item .btn--download .btn__icon .f-icon.icon-arrow-download {
-                  font-size: 8px;
-                  position: absolute;
-                  top: 9px;
-                  color: #fff; }
-                .download--ir .download__content .block-download.block-download--highlight .block-download--list .list-download .list-download__item .btn--download .btn__icon .f-icon.icon-file-download {
-                  color: #fff;
-                  font-size: 30px; }
-              .download--ir .download__content .block-download.block-download--highlight .block-download--list .list-download .list-download__item .btn--download .btn__text {
-                font-weight: 400;
-                color: #fff;
-                -ms-flex-item-align: center;
-                -ms-grid-row-align: center;
-                align-self: center; }
-              .download--ir .download__content .block-download.block-download--highlight .block-download--list .list-download .list-download__item .btn--download:hover .btn__icon .f-icon.icon-arrow-download {
-                top: 11px;
-                color: #24e0e0; }
-              .download--ir .download__content .block-download.block-download--highlight .block-download--list .list-download .list-download__item .btn--download:hover .btn__icon .f-icon.icon-file-download {
-                color: #24e0e0;
-                font-size: 30px; }
-        .download--ir .download__content .block-download.block-download--highlight .block-download--list:last-child {
-          padding-bottom: 0;
-          margin-bottom: 0; }
-      .download--ir .download__content .block-download.block-download--highlight:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        display: block;
-        background-image: url("../images/bg/bg-ir-highlight.svg");
-        background-repeat: no-repeat;
-        background-size: auto;
-        background-position: right;
-        width: 100%;
-        height: 189px; }
-    .download--ir .download__content .block-download.block-download__flexcenter {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center; }
-    .download--ir .download__content .block-download .block-download--list {
-      border-bottom: 1px solid #707070;
-      margin-bottom: 40px; }
-      .download--ir .download__content .block-download .block-download--list .block-download__title {
-        font-size: 1rem;
-        line-height: 1.5rem;
-        color: #1294A6;
-        text-transform: uppercase;
-        font-weight: 700; }
-      .download--ir .download__content .block-download .block-download--list .block-download__year {
-        font-size: 1.625rem;
-        line-height: 2.875rem;
-        color: #071866;
-        text-transform: uppercase;
-        font-weight: 700; }
-      .download--ir .download__content .block-download .block-download--list .list-download {
-        padding: 15px 0 25px;
-        display: block; }
-        .download--ir .download__content .block-download .block-download--list .list-download .list-download__item {
-          margin-bottom: 0; }
-          .download--ir .download__content .block-download .block-download--list .list-download .list-download__item .btn {
-            -webkit-box-align: start;
-            -ms-flex-align: start;
-            align-items: flex-start; }
-          .download--ir .download__content .block-download .block-download--list .list-download .list-download__item .btn--download {
-            padding: 0; }
-            .download--ir .download__content .block-download .block-download--list .list-download .list-download__item .btn--download .btn__icon {
-              position: relative;
-              margin-right: 10px; }
-              .download--ir .download__content .block-download .block-download--list .list-download .list-download__item .btn--download .btn__icon .f-icon {
-                color: #242424; }
-                .download--ir .download__content .block-download .block-download--list .list-download .list-download__item .btn--download .btn__icon .f-icon.icon-arrow-download {
-                  font-size: 14px;
-                  position: absolute;
-                  top: 12px;
-                  -webkit-transition: all 0.2s ease-in-out;
-                  -o-transition: all 0.2s ease-in-out;
-                  transition: all 0.2s ease-in-out; }
-                .download--ir .download__content .block-download .block-download--list .list-download .list-download__item .btn--download .btn__icon .f-icon.icon-file-download {
-                  font-size: 38px; }
-            .download--ir .download__content .block-download .block-download--list .list-download .list-download__item .btn--download .btn__text {
-              font-size: 1rem;
-              line-height: 1.375rem; }
-              .download--ir .download__content .block-download .block-download--list .list-download .list-download__item .btn--download .btn__text span {
-                display: block; }
-              .download--ir .download__content .block-download .block-download--list .list-download .list-download__item .btn--download .btn__text .btn__text__main {
-                font-weight: 600;
-                color: #071866; }
-              .download--ir .download__content .block-download .block-download--list .list-download .list-download__item .btn--download .btn__text .btn__text__desc {
-                font-weight: 400;
-                color: #242424; }
-            .download--ir .download__content .block-download .block-download--list .list-download .list-download__item .btn--download:hover .btn__icon .f-icon {
-              color: #1294A6; }
-              .download--ir .download__content .block-download .block-download--list .list-download .list-download__item .btn--download:hover .btn__icon .f-icon.icon-arrow-download {
-                top: 14px;
-                -webkit-transition: all 0.2s ease-in-out;
-                -o-transition: all 0.2s ease-in-out;
-                transition: all 0.2s ease-in-out; }
-        .download--ir .download__content .block-download .block-download--list .list-download.list-download--default .list-download__item {
-          width: 100%;
-          padding-right: 0; }
-          .download--ir .download__content .block-download .block-download--list .list-download.list-download--default .list-download__item .btn--download {
-            width: 100%;
-            padding: 15px; }
-          .download--ir .download__content .block-download .block-download--list .list-download.list-download--default .list-download__item:hover .btn--download {
-            background: #FFFFFF 0% 0% no-repeat padding-box;
-            -webkit-box-shadow: 0px 0px 20px #00000029;
-            box-shadow: 0px 0px 20px #00000029; }
-            .download--ir .download__content .block-download .block-download--list .list-download.list-download--default .list-download__item:hover .btn--download .btn__text .btn__text__desc {
-              color: #071866; }
-      .download--ir .download__content .block-download .block-download--list:last-child {
-        border-bottom: none; }
-    @media only screen and (max-width: 575px) {
-      .download--ir .download__content .block-download.block-download--highlight {
-        padding: 15px 20px; } }
-  @media only screen and (max-width: 991px) {
-    .download--ir .download__cover {
-      width: 100%; }
-    .download--ir .download__content .block-download.block-download--highlight {
-      background: rgba(14, 53, 116, 0.88); } }
-
 .main--content .content__body {
   padding: 45px 0; }
   @media (min-width: 1200px) {
@@ -1440,7 +1516,7 @@
 .main--content .text__note {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #404142;}
+  color: #404142; }
 
 .main--content .pagination {
   -webkit-box-pack: center;
@@ -1504,4 +1580,3 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; } }
-
