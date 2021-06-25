@@ -25,7 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
+.icon-webcast:before {
+  content: "\e90a";
+}
 .icon-arrow-circle-left:before {
   content: "\e905";
 }
