@@ -51,6 +51,7 @@
                 transform: translateX(92px);
                 z-index: 10;
                 p{
+                    text-transform: uppercase;
                     font-size: 16px;
                     line-height: 24px;
                     font-weight: 700;
@@ -58,6 +59,7 @@
                     margin-bottom: 0;
                 }
                 h1{
+                    text-transform: uppercase;
                     font-size: 32px;
                     line-height: 46px;
                     font-weight: 700;
@@ -113,9 +115,10 @@
                 bottom: 0;
                 left: 0;
                 background: rgba(14,53,116,.86);
-                padding: 50px 40px 10px 92px;
+                padding: 50px 40px 20px 92px;
                 .stock-price__head{
                     .stock-price__title{
+                        text-transform: uppercase;
                         font-weight: 700;
                         font-size: 2rem;
                         line-height: 2.625rem;
@@ -123,10 +126,13 @@
                     }
                     .btn--link{
                         text-align: right;
+                        .btn__text{
+                            text-transform: uppercase;
+                        }
                     }
                 }
                 .stock-price__body{
-                    padding: 10px 0;
+                    padding: 19px 0;
                     .stock-price--highlight{
                         font-weight: 600;
                         font-size: 2rem;
@@ -134,14 +140,26 @@
                         color: #fff;
                         span{
                             font-size: 1.3125rem;
-                            line-height: 3.125;
+                            line-height: 3.125rem;
                         }
                     }
                     .stock-price--item{
-                        .stock-price--item__text{
+                        display: flex;
+                        flex-direction: column;
+                        flex-grow: 1;
+
+                        .stock-price--item__label{
                             font-weight: 400;
                             font-size: 1rem;
-                            line-height: 2rem;
+                            line-height: 1.25rem;
+                            color: #fff;
+                        }
+                        .stock-price--item__text{
+                            margin-top: auto;
+                            padding: 13px 0 0;
+                            font-weight: 400;
+                            font-size: 1rem;
+                            line-height: 1.25rem;
                             color: #fff;
                         }
                     }
@@ -891,7 +909,8 @@
                 .home-ir-stock-price{
                     .stock-price__body{
                         .stock-price--item{
-                            margin-bottom: 20px;
+                            height: 100%;
+                            padding-bottom: 20px;
                             .stock-price--item__text{
                                 &:first-of-type{
                                     margin-bottom: 0;

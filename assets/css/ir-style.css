@@ -1007,12 +1007,14 @@
       transform: translateX(92px);
       z-index: 10; }
       .home-body .home-banner--ir .banner--item .text-banner p {
+        text-transform: uppercase;
         font-size: 16px;
         line-height: 24px;
         font-weight: 700;
         color: #1294A6;
         margin-bottom: 0; }
       .home-body .home-banner--ir .banner--item .text-banner h1 {
+        text-transform: uppercase;
         font-size: 32px;
         line-height: 46px;
         font-weight: 700;
@@ -1066,16 +1068,19 @@
       bottom: 0;
       left: 0;
       background: rgba(14, 53, 116, 0.86);
-      padding: 50px 40px 10px 92px; }
+      padding: 50px 40px 20px 92px; }
       .home-body .home-banner--ir .home-banner__bottom .home-ir-stock-price .stock-price__head .stock-price__title {
+        text-transform: uppercase;
         font-weight: 700;
         font-size: 2rem;
         line-height: 2.625rem;
         color: #24E0E0; }
       .home-body .home-banner--ir .home-banner__bottom .home-ir-stock-price .stock-price__head .btn--link {
         text-align: right; }
+        .home-body .home-banner--ir .home-banner__bottom .home-ir-stock-price .stock-price__head .btn--link .btn__text {
+          text-transform: uppercase; }
       .home-body .home-banner--ir .home-banner__bottom .home-ir-stock-price .stock-price__body {
-        padding: 10px 0; }
+        padding: 19px 0; }
         .home-body .home-banner--ir .home-banner__bottom .home-ir-stock-price .stock-price__body .stock-price--highlight {
           font-weight: 600;
           font-size: 2rem;
@@ -1083,12 +1088,30 @@
           color: #fff; }
           .home-body .home-banner--ir .home-banner__bottom .home-ir-stock-price .stock-price__body .stock-price--highlight span {
             font-size: 1.3125rem;
-            line-height: 3.125; }
-        .home-body .home-banner--ir .home-banner__bottom .home-ir-stock-price .stock-price__body .stock-price--item .stock-price--item__text {
-          font-weight: 400;
-          font-size: 1rem;
-          line-height: 2rem;
-          color: #fff; }
+            line-height: 3.125rem; }
+        .home-body .home-banner--ir .home-banner__bottom .home-ir-stock-price .stock-price__body .stock-price--item {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-flex: 1;
+          -ms-flex-positive: 1;
+          flex-grow: 1; }
+          .home-body .home-banner--ir .home-banner__bottom .home-ir-stock-price .stock-price__body .stock-price--item .stock-price--item__label {
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.25rem;
+            color: #fff; }
+          .home-body .home-banner--ir .home-banner__bottom .home-ir-stock-price .stock-price__body .stock-price--item .stock-price--item__text {
+            margin-top: auto;
+            padding: 13px 0 0;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.25rem;
+            color: #fff; }
       .home-body .home-banner--ir .home-banner__bottom .home-ir-stock-price .stock-price__footer .stock-price--lastupdate {
         font-size: 0.75rem;
         line-height: 1.6875rem;
@@ -1662,7 +1685,8 @@
 
 @media only screen and (max-width: 767px) {
   .home-body .home-banner--ir .home-banner__bottom .home-ir-stock-price .stock-price__body .stock-price--item {
-    margin-bottom: 20px; }
+    height: 100%;
+    padding-bottom: 20px; }
     .home-body .home-banner--ir .home-banner__bottom .home-ir-stock-price .stock-price__body .stock-price--item .stock-price--item__text:first-of-type {
       margin-bottom: 0; } }
 
