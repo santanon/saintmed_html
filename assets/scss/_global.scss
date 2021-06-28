@@ -2,37 +2,6 @@
     .content__body{
         position: relative;
         padding: 5rem 0 8rem;
-        &.bg-footer-left{
-            &::after{
-                content: '';
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                background-image: url('../images/bg/bg-footer-left.svg');
-                background-repeat: no-repeat;
-                background-position: left;
-                background-size: auto;
-                width: 100%;
-                height: 180px;
-                z-index: -1;
-            }
-            
-        }
-        &.bg-footer-right{
-            &::before{
-                content: '';
-                position: absolute;
-                bottom: 0;
-                right: 0;
-                background-image: url('../images/bg/bg-footer-right.svg');
-                background-repeat: no-repeat;
-                background-position: right;
-                background-size: auto;
-                width: 100%;
-                height: 298px;
-                z-index: -1;
-            }
-        }
         &--wrapper{
             padding: 80px 0;
         }
@@ -165,6 +134,12 @@
                             }
                         }
                     }
+
+                    &:last-of-type{
+                        .card-body{
+                            margin-bottom: 0;
+                        }
+                    }
                 }
             }
         }
@@ -205,6 +180,7 @@
                         tr{
                             td{
                                 text-align: center;
+                                color: #6D6D6D;
                                 &:last-child{
                                     background-color: inherit;
                                 }
@@ -298,6 +274,216 @@
                                 }
                                 &:last-child:not([colspan]){
                                     background-color: rgba($color: #1294A6, $alpha: 0.05);
+                                }
+                            }
+                        }
+                    }
+                }
+                &--download{
+                    thead{
+                        tr{
+                            th{
+                                border: none;
+                                text-align: left;
+                                vertical-align: middle;
+                                &:first-child{
+                                    position: relative;
+                                    min-width: 50px;
+            
+                                    &:before{
+                                        content: "";
+                                        position: absolute;
+                                        width: 100%;
+                                        height: 100%;
+                                        top: 0;
+                                        left: 0;
+                                        z-index: 0;
+                                        background-image: url('../images/bg-table-left.png');
+                                        background-position: top left;
+                                        background-repeat: no-repeat;
+                                        //transform: rotate(180deg);
+                                    }
+                                }
+            
+                                &:not(:last-child){
+                                    border-right: solid 1px white;
+                                }
+                                &:last-child{
+                                    background-color: #071866;
+                                    text-align: center;
+                                    padding-left: 60px;
+                                    padding-right: 60px;
+                                }
+                            }
+                        }
+                    }
+                    tbody{
+                        tr{
+                            td{
+                                text-align: left;
+                                vertical-align: middle;
+                                color: #6D6D6D;
+                                &.title{
+                                    color: #000;
+                                }
+                                &.text_indent{
+                                    font-size: 1rem;
+                                    line-height: 1.625rem;
+                                    font-weight: 500;
+                                    &--1{
+                                        padding-left: 32px;
+                                    }
+                                    &--2{
+                                        padding-left: 52px;
+                                    }
+                                }
+                                &:last-child{
+                                    background-color: inherit;
+                                    text-align: center;
+                                }
+
+                                .btn{
+                                    .btn__icon{
+                                        padding: 0;
+                                        position: relative;
+                                        align-items: center;
+                                        align-self: center;
+                                        margin-right: 10px;
+                                        .f-icon{
+                                            color: #242424;
+                                        }
+                                    }
+                                    .btn__text{
+                                        font-size: 0.875rem;
+                                        line-height: 1.5rem;
+                                        font-weight: 600;
+                                        color: #1D1D1D;
+                                    }
+                                    &.btn--download{
+                                        .btn__icon{
+                                            .f-icon{
+                                                &.icon-arrow-download{
+                                                    font-size: 12px;
+                                                    position: absolute;
+                                                    top: 12px;
+                                                    transition: all 0.2s ease-in-out;
+                                                }
+                                                &.icon-file-download{
+                                                    font-size: 34px;
+                                                }
+                                            }
+                                        }
+                                        &:hover{
+                                            color: #071866 !important;
+                                            .btn__icon{
+                                                .f-icon{
+                                                    color: #071866;
+                                                    &.icon-arrow-download{
+                                                        top: 14px;
+                                                        transition: all 0.2s ease-in-out;
+                                                    }
+                                                }
+                                            }
+                                            .btn__text{
+                                                color: #071866 !important;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &--investment{
+                    thead{
+                        tr{
+                            th{
+                                border: none;
+                                text-align: center;
+                                vertical-align: middle;
+                                border-right: solid 1px white;
+                                &:first-child{
+                                    position: relative;
+                                    min-width: 50px;
+            
+                                    &:before{
+                                        content: "";
+                                        position: absolute;
+                                        width: 100%;
+                                        height: 100%;
+                                        top: 0;
+                                        left: 0;
+                                        z-index: 0;
+                                        background-image: url('../images/bg-table-left.png');
+                                        background-position: top left;
+                                        background-repeat: no-repeat;
+                                        //transform: rotate(180deg);
+                                    }
+                                }
+                                &:last-child{
+                                    border-right: none;
+                                }
+                            }
+                        }
+                    }
+                    tbody{
+                        tr{
+                            td{
+                                text-align: center;
+                                color: #6D6D6D;
+                                font-size: 1rem;
+                                line-height: 1.625rem;
+                                font-weight: 500;
+                                &:last-child{
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+                    }
+                }
+                &--layoutfixed{
+                    table-layout: fixed;
+                    thead{
+                        tr{
+                            th{
+                                border: none;
+                                text-align: center;
+                                vertical-align: middle;
+                                border-right: solid 1px white;
+                                &:first-child{
+                                    position: relative;
+                                    min-width: 50px;
+            
+                                    &:before{
+                                        content: "";
+                                        position: absolute;
+                                        width: 100%;
+                                        height: 100%;
+                                        top: 0;
+                                        left: 0;
+                                        z-index: 0;
+                                        background-image: url('../images/bg-table-left.png');
+                                        background-position: top left;
+                                        background-repeat: no-repeat;
+                                        //transform: rotate(180deg);
+                                    }
+                                }
+                                &:last-child{
+                                    border-right: none;
+                                }
+                            }
+                        }
+                    }
+                    tbody{
+                        tr{
+                            td{
+                                text-align: center;
+                                color: #6D6D6D;
+                                font-size: 1rem;
+                                line-height: 1.625rem;
+                                font-weight: 500;
+                                &:last-child{
+                                    font-weight: 700;
                                 }
                             }
                         }
@@ -543,6 +729,254 @@
             }
         }
 
+        .ir-calendar{
+            &--lastevent{
+                .box-item{
+                    background-color: #fff;
+                    box-shadow: 0px 3px 20px #00000024;
+                    display: flex;
+                    cursor: pointer;
+                    .date-calendar{
+                        background-color: #071866;
+                        padding: 0 30px;
+                        text-align: center;
+                        position: relative;
+                        z-index: 1;
+                        overflow: hidden;
+                        &:after{
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            transform: scaleY(0);
+                            transform-origin: bottom center;
+                            background: #1294A6;
+                            z-index: -1;
+                            transition: transform 0.3s;
+                        }
+                        .content{
+                            display: flex;
+                            align-items: center;
+                            flex-wrap: wrap;
+                            flex-direction: column;
+                            justify-content: center;
+                            height: 100%;
+                            .d{
+                                font-size: 1.625rem;
+                                line-height:2.2rem;
+                                font-weight: 400;
+                                color: #fff;
+                                width: 100%;
+                            }
+                            .m-y{
+                                font-size: 0.75rem;
+                                line-height: 0.75rem;
+                                font-weight: 400;
+                                color: #fff;
+                                width: 100%;
+                            }
+                            .icon_calendar{
+                                position: relative;
+                                padding-top: 20px;
+                                .f-icon{
+                                    color: #fff;
+                                }
+                                .icon-calendar{
+                                    font-size: 30px;
+                                }
+                                .icon-calendar-plus{
+                                    position: absolute;
+                                    font-size: 14px;
+                                    bottom: 10px;
+                                    right: 2px;
+                                    transition: all 0.2s ease-in-out;
+                                    transform: rotate(0deg);
+                                    //transform-origin: center center;
+                                }
+                            }
+                        }
+                    }
+                    .event-calendar{
+                        padding: 30px;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-self: center;
+                        .event-title{
+                            font-size: 1.125rem;
+                            line-height: 2.375rem;
+                            font-weight: 700;
+                            color: #242424;
+                        }
+                        .event-content{
+                            .text{
+                                font-size: 0.875rem;
+                                line-height: 1.5rem;
+                                font-weight: 400;
+                                color: #242424;
+                                width: 50px;
+                                float: left;
+                                &:after{
+                                    content: '';
+                                    display: block;
+                                    clear: both;
+                                }
+                            }
+                            .desc{
+                                font-size: 0.875rem;
+                                line-height: 1.5rem;
+                                font-weight: 400;
+                                color: #242424;
+                                padding-left: 50px;
+                            }
+                        }
+                    }
+                    &:hover{
+                        box-shadow: 0px 3px 30px #00000024;
+                        .date-calendar{
+                            //background-color: #1294A6;
+                            &:after{
+                                transform: scaleY(1);
+                            }
+                            .content{
+                                .icon_calendar{
+                                    .icon-calendar-plus{
+                                        transition: all 0.2s ease-in-out;
+                                        transform: rotate(90deg);
+                                    }
+                                }
+                            }
+                        }
+                        .event-calendar{
+                            .event-title{
+                                color: #071866;
+                            }
+                            .event-time{
+                                .text{
+                                    color: #071866;
+                                }
+                                .desc{
+                                    color: #071866;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &--event{
+                .box-item{
+                    background-color: #fff;
+                    box-shadow: 0px 0px 10px #0000001A;
+                    border-bottom: 1px solid #24E0E0;
+                    display: flex;
+                    cursor: pointer;
+                    height: 100%;
+                    
+                    .date-calendar{
+                        transition: all 0.2s ease-in-out;
+                        padding: 0 18px;
+                        text-align: center;
+                        position: relative;
+                        .content{
+                            display: flex;
+                            align-items: center;
+                            flex-wrap: wrap;
+                            flex-direction: column;
+                            justify-content: center;
+                            height: 100%;
+                            .d{
+                                font-size: 1.625rem;
+                                line-height:2.2rem;
+                                font-weight: 400;
+                                color: #1294A6;
+                                width: 100%;
+                            }
+                            .m-y{
+                                font-size: 0.75rem;
+                                line-height: 0.75rem;
+                                font-weight: 400;
+                                color: #1294A6;
+                                width: 100%;
+                            }
+                            .icon_calendar{
+                                position: relative;
+                                padding-top: 20px;
+                                .f-icon{
+                                    color: #071866;
+                                }
+                                .icon-calendar{
+                                    font-size: 30px;
+                                }
+                                .icon-calendar-plus{
+                                    position: absolute;
+                                    font-size: 14px;
+                                    bottom: 10px;
+                                    right: 2px;
+                                    transition: all 0.2s ease-in-out;
+                                    transform: rotate(0deg);
+                                    //transform-origin: center center;
+                                }
+                            }
+                        }
+                    }
+                    .event-calendar{
+                        padding: 18px;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-self: center;
+                        .event-title{
+                            font-size: 1.0625rem;
+                            line-height: 1.375rem;
+                            font-weight: 700;
+                            color: #071866;
+                        }
+                        .event-content-wrapper{
+                            margin-top: auto;
+                            padding-top: 8px;
+                            .event-content{
+                                .text{
+                                    font-size: 0.875rem;
+                                    line-height: 1.5rem;
+                                    font-weight: 400;
+                                    color: #242424;
+                                    width: 50px;
+                                    float: left;
+                                    &:after{
+                                        content: '';
+                                        display: block;
+                                        clear: both;
+                                    }
+                                }
+                                .desc{
+                                    font-size: 0.875rem;
+                                    line-height: 1.5rem;
+                                    font-weight: 400;
+                                    color: #242424;
+                                    padding-left: 50px;
+                                }
+                            }
+                        }
+                        
+                    }
+                    &:hover{
+                        .date-calendar{
+                            .content{
+                                .icon_calendar{
+                                    .icon-calendar-plus{
+                                        transition: all 0.2s ease-in-out;
+                                        transform: rotate(90deg);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         @media only screen and (max-width: 991px){
             .block-accordion{
                 .accordion{
@@ -556,6 +990,23 @@
                                         height: 100%;
                                     }
                                 }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @media only screen and (max-width: 575px){
+            .ir-calendar{
+                &--lastevent{
+                    .box-item{
+                        .date-calendar{
+                            overflow: visible;
+                        }
+                        .event-calendar{
+                            padding: 30px 15px;
+                            .event-title{
+                                line-height: 1.875rem;
                             }
                         }
                     }

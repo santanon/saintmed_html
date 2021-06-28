@@ -395,7 +395,6 @@
                             }
                         }
                     }
-                    
                 }
 
                 &.box-item--slide{
@@ -765,37 +764,6 @@
         &.bg-color{
             background-color: #fff;
         }
-        &.bg-footer-left{
-            &::after{
-                content: '';
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                background-image: url('../images/bg/bg-footer-left.svg');
-                background-repeat: no-repeat;
-                background-position: left;
-                background-size: cover;
-                width: 426px;
-                height: 180px;
-                z-index: 1;
-            }
-            
-        }
-        &.bg-footer-right{
-            &::before{
-                content: '';
-                position: absolute;
-                bottom: 0;
-                right: 0;
-                background-image: url('../images/bg/bg-footer-right.svg');
-                background-repeat: no-repeat;
-                background-position: right bottom;
-                background-size: auto;
-                width: 426px;
-                height: 100%;
-                z-index: 1;
-            }
-        }
 
         .email-inner{
             position: relative;
@@ -931,13 +899,6 @@
                             }
                         }
                     }
-                }
-            }
-        }
-        .home-email{
-            &.bg-footer-left{
-                &::after{
-                    display: none;
                 }
             }
         }
