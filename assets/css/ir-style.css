@@ -1493,46 +1493,45 @@
   .main--content .card--publication-highlight .card__button {
     margin-top: 1.5rem;
     padding: 0; }
-  .main--content .card--publication-highlight .btn--download .btn__icon {
-    position: relative;
-    margin-right: 10px; }
-    .main--content .card--publication-highlight .btn--download .btn__icon .f-icon {
-      color: #1D1D1D; }
-      .main--content .card--publication-highlight .btn--download .btn__icon .f-icon.icon-arrow-download {
-        font-size: 14px;
-        position: absolute;
-        top: 12px;
+  .main--content .card--publication-highlight .btn--download {
+    margin-right: 3rem; }
+    .main--content .card--publication-highlight .btn--download .btn__icon {
+      position: relative;
+      margin-right: 10px; }
+      .main--content .card--publication-highlight .btn--download .btn__icon .f-icon {
+        font-size: 32px;
+        color: #1D1D1D; }
+        .main--content .card--publication-highlight .btn--download .btn__icon .f-icon.icon-arrow-download {
+          font-size: 14px;
+          position: absolute;
+          top: 12px;
+          -webkit-transition: all .3s ease-out;
+          -o-transition: all .3s ease-out;
+          transition: all .3s ease-out; }
+    .main--content .card--publication-highlight .btn--download .btn__text {
+      font-size: 1rem;
+      line-height: 1.375rem; }
+      .main--content .card--publication-highlight .btn--download .btn__text span {
+        display: block; }
+      .main--content .card--publication-highlight .btn--download .btn__text .btn__text__main {
+        font-weight: 700;
+        line-height: 1.125rem;
+        color: #1D1D1D;
         -webkit-transition: all .3s ease-out;
         -o-transition: all .3s ease-out;
         transition: all .3s ease-out; }
-      .main--content .card--publication-highlight .btn--download .btn__icon .f-icon.icon-file-download {
-        font-size: 38px; }
-      .main--content .card--publication-highlight .btn--download .btn__icon .f-icon.icon-webcast {
-        font-size: 38px; }
-  .main--content .card--publication-highlight .btn--download .btn__text {
-    font-size: 1rem;
-    line-height: 1.375rem; }
-    .main--content .card--publication-highlight .btn--download .btn__text span {
-      display: block; }
-    .main--content .card--publication-highlight .btn--download .btn__text .btn__text__main {
-      font-weight: 700;
-      line-height: 1.125rem;
-      color: #1D1D1D;
+    .main--content .card--publication-highlight .btn--download:hover .btn__icon .f-icon {
+      color: #071866; }
+      .main--content .card--publication-highlight .btn--download:hover .btn__icon .f-icon.icon-arrow-download {
+        top: 14px;
+        -webkit-transition: all .3s ease-out;
+        -o-transition: all .3s ease-out;
+        transition: all .3s ease-out; }
+    .main--content .card--publication-highlight .btn--download:hover .btn__text .btn__text__main {
+      color: #071866;
       -webkit-transition: all .3s ease-out;
       -o-transition: all .3s ease-out;
       transition: all .3s ease-out; }
-  .main--content .card--publication-highlight .btn--download:hover .btn__icon .f-icon {
-    color: #071866; }
-    .main--content .card--publication-highlight .btn--download:hover .btn__icon .f-icon.icon-arrow-download {
-      top: 14px;
-      -webkit-transition: all .3s ease-out;
-      -o-transition: all .3s ease-out;
-      transition: all .3s ease-out; }
-  .main--content .card--publication-highlight .btn--download:hover .btn__text .btn__text__main {
-    color: #071866;
-    -webkit-transition: all .3s ease-out;
-    -o-transition: all .3s ease-out;
-    transition: all .3s ease-out; }
   .main--content .card--publication-highlight:hover .card__image {
     -webkit-transform: scale(1.05);
     -ms-transform: scale(1.05);
@@ -1605,6 +1604,7 @@
     position: relative;
     margin-right: 5px; }
     .main--content .card--publication .btn--download .btn__icon .f-icon {
+      font-size: 32px;
       color: #1D1D1D; }
       .main--content .card--publication .btn--download .btn__icon .f-icon.icon-arrow-download {
         font-size: 14px;
@@ -1613,10 +1613,6 @@
         -webkit-transition: all .3s ease-out;
         -o-transition: all .3s ease-out;
         transition: all .3s ease-out; }
-      .main--content .card--publication .btn--download .btn__icon .f-icon.icon-file-download {
-        font-size: 38px; }
-      .main--content .card--publication .btn--download .btn__icon .f-icon.icon-webcast {
-        font-size: 38px; }
   .main--content .card--publication .btn--download .btn__text {
     margin: 0 10px;
     font-size: 1rem;
@@ -1643,6 +1639,159 @@
     -o-transition: all .3s ease-out;
     transition: all .3s ease-out; }
   .main--content .card--publication:hover .card__image {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05); }
+
+.main--content .card--report-highlight {
+  background: 100% 0/30% no-repeat;
+  background-image: url("../images/bg/bg-element.svg"); }
+  .main--content .card--report-highlight .card__date {
+    color: #1294a6;
+    font-weight: 500;
+    font-size: 0.75rem; }
+  .main--content .card--report-highlight .card__title {
+    color: #071866;
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-transform: uppercase; }
+  .main--content .card--report-highlight .card__button {
+    margin-top: 1.5rem;
+    padding: 0; }
+  .main--content .card--report-highlight .btn--download {
+    margin-right: 3rem; }
+    .main--content .card--report-highlight .btn--download .btn__icon {
+      position: relative;
+      margin-right: 10px; }
+      .main--content .card--report-highlight .btn--download .btn__icon .f-icon {
+        font-size: 32px;
+        color: #1D1D1D; }
+        .main--content .card--report-highlight .btn--download .btn__icon .f-icon.icon-arrow-download {
+          font-size: 14px;
+          position: absolute;
+          top: 12px;
+          -webkit-transition: all .3s ease-out;
+          -o-transition: all .3s ease-out;
+          transition: all .3s ease-out; }
+    .main--content .card--report-highlight .btn--download .btn__text {
+      font-size: 1rem;
+      line-height: 1.375rem; }
+      .main--content .card--report-highlight .btn--download .btn__text span {
+        display: block; }
+      .main--content .card--report-highlight .btn--download .btn__text .btn__text__main {
+        font-weight: 700;
+        line-height: 1.125rem;
+        color: #1D1D1D;
+        -webkit-transition: all .3s ease-out;
+        -o-transition: all .3s ease-out;
+        transition: all .3s ease-out; }
+    .main--content .card--report-highlight .btn--download:hover .btn__icon .f-icon {
+      color: #071866; }
+      .main--content .card--report-highlight .btn--download:hover .btn__icon .f-icon.icon-arrow-download {
+        top: 14px;
+        -webkit-transition: all .3s ease-out;
+        -o-transition: all .3s ease-out;
+        transition: all .3s ease-out; }
+    .main--content .card--report-highlight .btn--download:hover .btn__text .btn__text__main {
+      color: #071866;
+      -webkit-transition: all .3s ease-out;
+      -o-transition: all .3s ease-out;
+      transition: all .3s ease-out; }
+    .main--content .card--report-highlight .btn--download:last-child {
+      margin-right: 0; }
+  .main--content .card--report-highlight:hover .card__image {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05); }
+  @media (max-width: 991.98px) {
+    .main--content .card--report-highlight {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      .main--content .card--report-highlight .card__cover {
+        width: 100%; }
+      .main--content .card--report-highlight .card__body {
+        width: 100%;
+        padding: 1.5rem; } }
+  @media (max-width: 767.98px) {
+    .main--content .card--report-highlight .btn--download {
+      margin-top: 0.5rem; } }
+
+.main--content .card--report {
+  border-radius: 0;
+  border: 0; }
+  .main--content .card--report .card__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    padding: 1.5rem 0; }
+  .main--content .card--report .card__date {
+    color: #1294a6;
+    font-weight: 500;
+    font-size: 0.75rem; }
+  .main--content .card--report .card__title {
+    color: #071866;
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-transform: uppercase; }
+  .main--content .card--report .card__button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+  .main--content .card--report .btn--download .btn__icon {
+    position: relative;
+    margin-right: 5px; }
+    .main--content .card--report .btn--download .btn__icon .f-icon {
+      font-size: 32px;
+      color: #1D1D1D; }
+      .main--content .card--report .btn--download .btn__icon .f-icon.icon-arrow-download {
+        font-size: 14px;
+        position: absolute;
+        top: 12px;
+        -webkit-transition: all .3s ease-out;
+        -o-transition: all .3s ease-out;
+        transition: all .3s ease-out; }
+  .main--content .card--report .btn--download .btn__text {
+    margin: 0 10px;
+    font-size: 1rem;
+    line-height: 1.375rem; }
+    .main--content .card--report .btn--download .btn__text span {
+      display: block; }
+    .main--content .card--report .btn--download .btn__text .btn__text__main {
+      font-weight: 700;
+      line-height: 1.125rem;
+      color: #1D1D1D;
+      -webkit-transition: all .3s ease-out;
+      -o-transition: all .3s ease-out;
+      transition: all .3s ease-out; }
+  .main--content .card--report .btn--download:hover .btn__icon .f-icon {
+    color: #071866; }
+    .main--content .card--report .btn--download:hover .btn__icon .f-icon.icon-arrow-download {
+      top: 14px;
+      -webkit-transition: all .3s ease-out;
+      -o-transition: all .3s ease-out;
+      transition: all .3s ease-out; }
+  .main--content .card--report .btn--download:hover .btn__text .btn__text__main {
+    color: #071866;
+    -webkit-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out; }
+  .main--content .card--report:hover .card__image {
     -webkit-transform: scale(1.05);
     -ms-transform: scale(1.05);
     transform: scale(1.05); }
