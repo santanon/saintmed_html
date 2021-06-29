@@ -180,6 +180,15 @@
     .home-financial{
         position: relative;
         padding: 172px 0 153px;
+        .bg-overlay-financial{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat,no-repeat;
+            background-position: 0 130px,100% 100%;
+            background-image: url('../images/bg/Financial-Element-1.svg'),url('../images/bg/Financial-Element-2.svg');
+        }
         .chart__body{
             padding-top: 60px;
         }
@@ -839,6 +848,12 @@
                 }
             }
         }
+        .home-financial{
+            padding: 80px 0;
+            .bg-overlay-financial{
+                background-position: 0 20px,100% 100%;
+            }
+        }
     }
     @media only screen and (max-width: 991px){
         .home-banner--ir{
@@ -1027,16 +1042,6 @@
             }
         }
     }
-}
-
-.bg-overlay-financial{
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat,no-repeat;
-    background-position: 0 130px,100% 100%;
-    background-image: url('../images/bg/Financial-Element-1.svg'),url('../images/bg/Financial-Element-2.svg');
 }
 
 
