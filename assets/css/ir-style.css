@@ -1139,6 +1139,14 @@
 .home-body .home-financial {
   position: relative;
   padding: 172px 0 153px; }
+  .home-body .home-financial .bg-overlay-financial {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat,no-repeat;
+    background-position: 0 130px,100% 100%;
+    background-image: url("../images/bg/Financial-Element-1.svg"), url("../images/bg/Financial-Element-2.svg"); }
   .home-body .home-financial .chart__body {
     padding-top: 60px; }
 
@@ -1665,7 +1673,11 @@
       font-size: 1.8rem; }
     .home-body .home-banner--ir .home-banner__bottom .home-ir-stock-price .stock-price__body .stock-price--item .stock-price--item__text:first-of-type {
       line-height: 1.5rem;
-      margin-bottom: 10px; } }
+      margin-bottom: 10px; }
+  .home-body .home-financial {
+    padding: 80px 0; }
+    .home-body .home-financial .bg-overlay-financial {
+      background-position: 0 20px,100% 100%; } }
 
 @media only screen and (max-width: 991px) {
   .home-body .home-banner--ir .banner--item .image-banner {
@@ -1752,15 +1764,6 @@
       margin-left: auto;
       margin-right: auto;
       margin-bottom: 15px; } }
-
-.bg-overlay-financial {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat,no-repeat;
-  background-position: 0 130px,100% 100%;
-  background-image: url("../images/bg/Financial-Element-1.svg"), url("../images/bg/Financial-Element-2.svg"); }
 
 .main--content .content__body {
   padding: 3rem 0; }
