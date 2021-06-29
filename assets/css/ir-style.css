@@ -1137,7 +1137,8 @@
         text-align: right; }
 
 .home-body .home-financial {
-  padding: 130px 0; }
+  position: relative;
+  padding: 172px 0 153px; }
   .home-body .home-financial .chart__body {
     padding-top: 60px; }
 
@@ -1751,6 +1752,15 @@
       margin-left: auto;
       margin-right: auto;
       margin-bottom: 15px; } }
+
+.bg-overlay-financial {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat,no-repeat;
+  background-position: 0 130px,100% 100%;
+  background-image: url("../images/bg/Financial-Element-1.svg"), url("../images/bg/Financial-Element-2.svg"); }
 
 .main--content .content__body {
   padding: 3rem 0; }
