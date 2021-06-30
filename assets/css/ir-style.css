@@ -1731,9 +1731,6 @@
     padding: 30px 15px; }
     .home-body .home-announce-calendar .announce-calendar-inner .box-item .box-item__body.box-item--calendar .event-calendar .event-title {
       line-height: 1.875rem; }
-  .home-body .home-download .download-inner .download__wrapper .box-download.box-download--right .list-download .list-download__item .btn {
-    padding-left: 0 !important;
-    padding-right: 0 !important; }
   .home-body .home-download .download-inner .investor__wrapper .investor__content {
     padding: 20px; }
     .home-body .home-download .download-inner .investor__wrapper .investor__content .text-main {
