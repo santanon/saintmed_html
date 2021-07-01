@@ -109,11 +109,11 @@ $(function() {
             },
             title: {
                 text: "TOP SHAREHOLDERS",
-                top: 40,
+                top: 15,
                 left: "52.5%",
                 textStyle: {
                     fontWeight: "bold",
-                    fontSize: "22px",
+                    fontSize: 22,
                     color: "#071866"
                 },
             },
@@ -124,13 +124,13 @@ $(function() {
                 borderRadius: 0,
                 formatter: function (params) {
                     // marker is an HTML tag
-                    var res = '<span class="text-blue font-weight-bold">' + params.name + '</span>' + '<br>' + '<span style="display:inline-block;margin-right:5px;top;5px;border-radius:0;width:16px;height:16px;background-color:' + params.color + ';' + '>' + params.marker + '</span>' + '<span style="line-height: 24px">' + params.value + '</span>';
-                    // console.log(params, params.name, params.marker, params.value, params.color);
+                    var res = '<span style="color: black">' + params.name + '</span>' + '<br>' + '<span style="display:inline-block;margin-right:5px;margin-top;5px;border-radius:0;width:16px;height:16px;background-color:' + params.color + ';' + '>' + params.marker + '</span>' + '<span style="color: black; line-height: 16px">' + params.value + '</span>';
+                    console.log(res);
                     return res;
                 },
             },
             legend: {
-                top: 90,
+                top: 65,
                 left: "52.5%",
                 orient: "vertical",
                 itemWidth: 16,
@@ -211,7 +211,7 @@ $(function() {
                 textAlign: "auto",
                 textStyle: {
                     fontWeight: "bold",
-                    fontSize: "20px",
+                    fontSize: 20,
                     color: "#071866"
                 },
             },
@@ -309,7 +309,7 @@ $(function() {
                 textAlign: "auto",
                 textStyle: {
                     fontWeight: "bold",
-                    fontSize: "20px",
+                    fontSize: 20,
                     color: "#071866"
                 },
             },
