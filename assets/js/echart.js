@@ -10,6 +10,7 @@ $(function() {
                 series: [
                     {
                         name: 'TOTAL ASSETS',
+                        showBackground: true,
                         barWidth: '30',
                         data: [
                             {
