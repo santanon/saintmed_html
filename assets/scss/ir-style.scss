@@ -332,6 +332,7 @@
                             padding: 0 30px;
                             text-align: center;
                             position: relative;
+                            transition: all 0.2s ease-in-out;
                             .content{
                                 display: flex;
                                 align-items: center;
@@ -411,6 +412,7 @@
                         }
                         &:hover{
                             .date-calendar{
+                                background-color: #40BACB;
                                 .content{
                                     .icon_calendar{
                                         .icon-calendar-plus{
@@ -529,9 +531,7 @@
                 .box-download{
                     padding: 10px 0;
                     height: 100%;
-                    &.box-download--left{
-                        border-right: 1px solid rgba($color: #707070, $alpha: 0.1);
-                    }
+
                     .box-download__highlight{
                         display: flex;
                         align-items: flex-start;
@@ -631,16 +631,19 @@
                             }
                         }
                     }
+
+                    &.box-download--left{
+                        border-right: 1px solid rgba($color: #707070, $alpha: 0.1);
+                    }
+                    
                     &.box-download--right{
                         .list-download{
-                            //padding: 15px 0 25px;
-                            display: block;
+                            justify-content: center;
                             .list-download__item{
+                                padding-right: 0;
                                 margin-bottom: 0;
-                                .btn{
-                                    align-items: flex-start;
-                                }
                                 .btn--download{
+                                    align-items: flex-start;
                                     padding: 0;
                                     .btn__icon{
                                         position: relative;
@@ -654,6 +657,9 @@
                                                 transition: all 0.2s ease-in-out;
                                             }
                                             &.icon-file-download{
+                                                font-size: 38px;
+                                            }
+                                            &.icon-filing{
                                                 font-size: 38px;
                                             }
                                         }
@@ -685,47 +691,18 @@
                                         }
                                     }
                                 }
-                                .btn--filing{
-                                    width: 100%;
-                                    padding: 15px;
-                                    display: flex;
-                                    .btn__icon{
-                                        position: relative;
-                                        margin-right: 10px;
-                                        .f-icon{
-                                            color: #242424;
-                                            &.icon-filing{
-                                                font-size: 38px;
-                                            }
-                                        }
-                                    }
-                                    .btn__text{
-                                        font-size: 1rem;
-                                        line-height: 1.5rem;
-                                        color: #071866;
-                                        margin-left: .5rem;
-                                    }
-                                    &:hover{
-                                        .btn__icon{
-                                            .f-icon{
-                                                color: #1294A6;
-                                            }
-                                        }
-                                    }
-                                }
                             }
                             &.list-download--default{
                                 .list-download__item{
-                                    width: 100%;
-                                    padding-right: 0;
+                                    margin: 10px 0;
                                     .btn--download{
                                         width: 100%;
                                         padding: 15px;
-                                        //background-color: #000;
                                     }
                                     
                                     &:hover{
-                                        .btn--download, .btn--filing{
+                                        .btn--download, 
+                                        .btn--filing{
                                             background: #FFFFFF 0% 0% no-repeat padding-box;
                                             box-shadow: 0px 0px 20px #00000029;
                                             .btn__text{
@@ -734,6 +711,11 @@
                                                 }
                                             }
                                         }
+                                    }
+
+                                    @media screen and (max-width: 575.98px){
+                                        max-width: 250px;
+                                        margin: 0;
                                     }
                                 }
                             }
@@ -942,7 +924,8 @@
         .home-banner--ir{
             .banner--item{
                 .text-banner{
-                    transform: translateX(15px);
+                    transform: translateX(0);
+                    padding: 15px;
                 }
             }
             .home-banner__bottom{

@@ -31,6 +31,7 @@ $(function() {
         }
         chart.render('bar', 'chart_Assets', chartAssets);
     }
+
     if ($('#chart_Revenues').length) {
         let chartRevenue  = {
             baseOption: {
@@ -63,6 +64,7 @@ $(function() {
         }
         chart.render('bar', 'chart_Revenues', chartRevenue);
     }
+    
     if ($('#chart_Profit').length) {
         let chartProfit = {
             baseOption: {
@@ -95,7 +97,6 @@ $(function() {
         }
         chart.render('bar', 'chart_Profit', chartProfit);
     }
-
 
     if ($('#chart_shareholder').length) {
         var myChart_shareholder = echarts.init(document.getElementById('chart_shareholder'));
@@ -410,4 +411,8 @@ $(function() {
             myChart_shareholder.setOption(option_Assets_Desktop);
         }
     }
+
+    window.addEventListener('resize',function(){
+        chart.resize();
+    })
 });

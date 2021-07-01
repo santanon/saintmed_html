@@ -899,6 +899,8 @@
   border: none;
   border-radius: 3px;
   color: #fff !important; }
+  .btn.btn--custom:hover {
+    background-color: #1294a6 !important; }
 
 .btn--link.btn--link__white .btn__text {
   color: #fff;
@@ -1272,7 +1274,10 @@
           background-color: #1294A6;
           padding: 0 30px;
           text-align: center;
-          position: relative; }
+          position: relative;
+          -webkit-transition: all 0.2s ease-in-out;
+          -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out; }
           .home-body .home-announce-calendar .announce-calendar-inner .box-item .box-item__body.box-item--calendar .date-calendar .content {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -1354,13 +1359,15 @@
             font-weight: 400;
             color: #071866;
             padding-left: 50px; }
-        .home-body .home-announce-calendar .announce-calendar-inner .box-item .box-item__body.box-item--calendar:hover .date-calendar .content .icon_calendar .icon-calendar-plus {
-          -webkit-transition: all 0.2s ease-in-out;
-          -o-transition: all 0.2s ease-in-out;
-          transition: all 0.2s ease-in-out;
-          -webkit-transform: rotate(90deg);
-          -ms-transform: rotate(90deg);
-          transform: rotate(90deg); }
+        .home-body .home-announce-calendar .announce-calendar-inner .box-item .box-item__body.box-item--calendar:hover .date-calendar {
+          background-color: #40BACB; }
+          .home-body .home-announce-calendar .announce-calendar-inner .box-item .box-item__body.box-item--calendar:hover .date-calendar .content .icon_calendar .icon-calendar-plus {
+            -webkit-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+            -webkit-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            transform: rotate(90deg); }
     .home-body .home-announce-calendar .announce-calendar-inner .box-item.box-item--slide .box-item__body {
       position: relative;
       padding-bottom: 60px; }
@@ -1441,8 +1448,6 @@
       .home-body .home-download .download-inner .download__wrapper .box-download {
         padding: 10px 0;
         height: 100%; }
-        .home-body .home-download .download-inner .download__wrapper .box-download.box-download--left {
-          border-right: 1px solid rgba(112, 112, 112, 0.1); }
         .home-body .home-download .download-inner .download__wrapper .box-download .box-download__highlight {
           display: -webkit-box;
           display: -ms-flexbox;
@@ -1511,15 +1516,19 @@
               color: #071866; }
             .home-body .home-download .download-inner .download__wrapper .box-download .box-download__highlight .highlight__link .highlight__body .item:last-child {
               margin-bottom: 0; }
+        .home-body .home-download .download-inner .download__wrapper .box-download.box-download--left {
+          border-right: 1px solid rgba(112, 112, 112, 0.1); }
         .home-body .home-download .download-inner .download__wrapper .box-download.box-download--right .list-download {
-          display: block; }
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center; }
           .home-body .home-download .download-inner .download__wrapper .box-download.box-download--right .list-download .list-download__item {
+            padding-right: 0;
             margin-bottom: 0; }
-            .home-body .home-download .download-inner .download__wrapper .box-download.box-download--right .list-download .list-download__item .btn {
+            .home-body .home-download .download-inner .download__wrapper .box-download.box-download--right .list-download .list-download__item .btn--download {
               -webkit-box-align: start;
               -ms-flex-align: start;
-              align-items: flex-start; }
-            .home-body .home-download .download-inner .download__wrapper .box-download.box-download--right .list-download .list-download__item .btn--download {
+              align-items: flex-start;
               padding: 0; }
               .home-body .home-download .download-inner .download__wrapper .box-download.box-download--right .list-download .list-download__item .btn--download .btn__icon {
                 position: relative;
@@ -1534,6 +1543,8 @@
                     -o-transition: all 0.2s ease-in-out;
                     transition: all 0.2s ease-in-out; }
                   .home-body .home-download .download-inner .download__wrapper .box-download.box-download--right .list-download .list-download__item .btn--download .btn__icon .f-icon.icon-file-download {
+                    font-size: 38px; }
+                  .home-body .home-download .download-inner .download__wrapper .box-download.box-download--right .list-download .list-download__item .btn--download .btn__icon .f-icon.icon-filing {
                     font-size: 38px; }
               .home-body .home-download .download-inner .download__wrapper .box-download.box-download--right .list-download .list-download__item .btn--download .btn__text {
                 font-size: 1rem;
@@ -1553,38 +1564,23 @@
                   -webkit-transition: all 0.2s ease-in-out;
                   -o-transition: all 0.2s ease-in-out;
                   transition: all 0.2s ease-in-out; }
-            .home-body .home-download .download-inner .download__wrapper .box-download.box-download--right .list-download .list-download__item .btn--filing {
-              width: 100%;
-              padding: 15px;
-              display: -webkit-box;
-              display: -ms-flexbox;
-              display: flex; }
-              .home-body .home-download .download-inner .download__wrapper .box-download.box-download--right .list-download .list-download__item .btn--filing .btn__icon {
-                position: relative;
-                margin-right: 10px; }
-                .home-body .home-download .download-inner .download__wrapper .box-download.box-download--right .list-download .list-download__item .btn--filing .btn__icon .f-icon {
-                  color: #242424; }
-                  .home-body .home-download .download-inner .download__wrapper .box-download.box-download--right .list-download .list-download__item .btn--filing .btn__icon .f-icon.icon-filing {
-                    font-size: 38px; }
-              .home-body .home-download .download-inner .download__wrapper .box-download.box-download--right .list-download .list-download__item .btn--filing .btn__text {
-                font-size: 1rem;
-                line-height: 1.5rem;
-                color: #071866;
-                margin-left: .5rem; }
-              .home-body .home-download .download-inner .download__wrapper .box-download.box-download--right .list-download .list-download__item .btn--filing:hover .btn__icon .f-icon {
-                color: #1294A6; }
           .home-body .home-download .download-inner .download__wrapper .box-download.box-download--right .list-download.list-download--default .list-download__item {
-            width: 100%;
-            padding-right: 0; }
+            margin: 10px 0; }
             .home-body .home-download .download-inner .download__wrapper .box-download.box-download--right .list-download.list-download--default .list-download__item .btn--download {
               width: 100%;
               padding: 15px; }
-            .home-body .home-download .download-inner .download__wrapper .box-download.box-download--right .list-download.list-download--default .list-download__item:hover .btn--download, .home-body .home-download .download-inner .download__wrapper .box-download.box-download--right .list-download.list-download--default .list-download__item:hover .btn--filing {
+            .home-body .home-download .download-inner .download__wrapper .box-download.box-download--right .list-download.list-download--default .list-download__item:hover .btn--download,
+            .home-body .home-download .download-inner .download__wrapper .box-download.box-download--right .list-download.list-download--default .list-download__item:hover .btn--filing {
               background: #FFFFFF 0% 0% no-repeat padding-box;
               -webkit-box-shadow: 0px 0px 20px #00000029;
               box-shadow: 0px 0px 20px #00000029; }
-              .home-body .home-download .download-inner .download__wrapper .box-download.box-download--right .list-download.list-download--default .list-download__item:hover .btn--download .btn__text .btn__text__desc, .home-body .home-download .download-inner .download__wrapper .box-download.box-download--right .list-download.list-download--default .list-download__item:hover .btn--filing .btn__text .btn__text__desc {
+              .home-body .home-download .download-inner .download__wrapper .box-download.box-download--right .list-download.list-download--default .list-download__item:hover .btn--download .btn__text .btn__text__desc,
+              .home-body .home-download .download-inner .download__wrapper .box-download.box-download--right .list-download.list-download--default .list-download__item:hover .btn--filing .btn__text .btn__text__desc {
                 color: #071866; }
+            @media screen and (max-width: 575.98px) {
+              .home-body .home-download .download-inner .download__wrapper .box-download.box-download--right .list-download.list-download--default .list-download__item {
+                max-width: 250px;
+                margin: 0; } }
     .home-body .home-download .download-inner .investor__wrapper .investor__content {
       background-color: #FAFAFA;
       padding: 20px 100px 20px 40px;
@@ -1722,9 +1718,10 @@
 
 @media only screen and (max-width: 575px) {
   .home-body .home-banner--ir .banner--item .text-banner {
-    -webkit-transform: translateX(15px);
-    -ms-transform: translateX(15px);
-    transform: translateX(15px); }
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    padding: 15px; }
   .home-body .home-banner--ir .home-banner__bottom .home-ir-stock-price {
     padding: 30px 15px; }
   .home-body .home-announce-calendar .announce-calendar-inner .box-item .box-item__body.box-item--calendar .event-calendar {
