@@ -1114,6 +1114,10 @@
         border: none;
         border-radius: 3px;
         color: #fff !important;
+
+        &:hover{
+            background-color: #1294a6 !important;
+        }
     }
 }
 .btn--link{
