@@ -124,7 +124,7 @@ $(function() {
                 borderRadius: 0,
                 formatter: function (params) {
                     // marker is an HTML tag
-                    var res = '<span style="color: black">' + params.name + '</span>' + '<br>' + '<span style="display:inline-block;margin-right:5px;margin-top;5px;border-radius:0;width:16px;height:16px;background-color:' + params.color + ';' + '>' + params.marker + '</span>' + '<span style="color: black; line-height: 16px">' + params.value + '</span>';
+                    var res = '<span style="font-weight: 700; color: #071866;">' + params.name + '</span>' + '<br>' + '<span style="font-weight: 500; color: #24E0E0; line-height: 16px">' + params.value + '</span>';
                     console.log(res);
                     return res;
                 },
@@ -222,8 +222,8 @@ $(function() {
                 borderRadius: 0,
                 formatter: function (params) {
                     // marker is an HTML tag
-                    var res = '<span class="text-blue font-weight-bold">' + params.name + '</span>' + '<br>' + '<span style="display:inline-block;margin-right:5px;top;5px;border-radius:0;width:16px;height:16px;background-color:' + params.color + ';' + '>' + params.marker + '</span>' + '<span style="line-height: 24px">' + params.value + '</span>';
-                    // console.log(params, params.name, params.marker, params.value, params.color);
+                    var res = '<span style="font-weight: 700; color: #071866;">' + params.name + '</span>' + '<br>' + '<span style="font-weight: 500; color: #24E0E0; line-height: 16px">' + params.value + '</span>';
+                    console.log(res);
                     return res;
                 },
             },
@@ -320,8 +320,8 @@ $(function() {
                 borderRadius: 0,
                 formatter: function (params) {
                     // marker is an HTML tag
-                    var res = '<span class="text-blue font-weight-bold">' + params.name + '</span>' + '<br>' + '<span style="display:inline-block;margin-right:5px;top;5px;border-radius:0;width:16px;height:16px;background-color:' + params.color + ';' + '>' + params.marker + '</span>' + '<span style="line-height: 24px">' + params.value + '</span>';
-                    // console.log(params, params.name, params.marker, params.value, params.color);
+                    var res = '<span style="font-weight: 700; color: #071866;">' + params.name + '</span>' + '<br>' + '<span style="font-weight: 500; color: #24E0E0; line-height: 16px">' + params.value + '</span>';
+                    console.log(res);
                     return res;
                 },
             },
