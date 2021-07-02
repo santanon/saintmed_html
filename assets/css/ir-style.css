@@ -404,7 +404,17 @@
         padding: 30px 40px;
         position: relative;
         z-index: 1;
-        min-height: 280px; }
+        min-height: 280px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center; }
         .content .content__body .download--ir .download__content .block-download.block-download--highlight .block-download--list {
           border-bottom: 1px solid rgba(255, 255, 255, 0.2);
           margin-bottom: 15px;
@@ -415,7 +425,7 @@
             color: #24E0E0; }
           .content .content__body .download--ir .download__content .block-download.block-download--highlight .block-download--list .block-download__year {
             font-size: 1rem;
-            line-height: 2.875rem;
+            line-height: 1.875rem;
             color: #fff; }
           .content .content__body .download--ir .download__content .block-download.block-download--highlight .block-download--list .list-download {
             padding: 0; }
@@ -2155,6 +2165,17 @@
 .main--content .card--report-highlight {
   background: 100% 0/30% no-repeat;
   background-image: url("../images/bg/bg-element.svg"); }
+  .main--content .card--report-highlight .card__cover {
+    width: 50%;
+    overflow: hidden;
+    background-image: url("../images/one-report/bg.jpg"); }
+  .main--content .card--report-highlight .card__image {
+    width: 100%;
+    -webkit-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out; }
+    .main--content .card--report-highlight .card__image--unset {
+      max-width: unset; }
   .main--content .card--report-highlight .card__date {
     color: #1294a6;
     font-weight: 500;

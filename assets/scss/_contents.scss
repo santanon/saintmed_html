@@ -237,6 +237,7 @@
         }
     }
 
+
     .card--publication-highlight {
         display: flex;
         flex-direction: row;
@@ -463,6 +464,20 @@
     .card--report-highlight {
         background: 100% 0/30% no-repeat;
         background-image: url('../images/bg/bg-element.svg');
+
+        .card__cover {
+            width: 50%;
+            overflow: hidden;
+            background-image: url('../images/one-report/bg.jpg');
+        }
+
+        .card__image {
+            width: 100%;
+            transition: all 0.3s ease-out;
+            &--unset{
+                max-width: unset;
+            }
+        }
 
         .card__date {
             color: #1294a6;
