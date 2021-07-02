@@ -124,7 +124,7 @@ $(function() {
                 borderRadius: 0,
                 formatter: function (params) {
                     // marker is an HTML tag
-                    var res = '<span style="font-weight: 700; color: #071866;">' + params.name + '</span>' + '<br>' + '<span style="font-weight: 500; color: #24E0E0; line-height: 16px">' + params.value + '</span>';
+                    var res = '<div style="padding: 8px;"><span style="font-weight: 700; color: #071866;">' + params.name + '</span>' + '<br>' + '<span style="font-weight: 500; color: #24E0E0; line-height: 16px">' + params.value + '</span></div>';
                     console.log(res);
                     return res;
                 },
