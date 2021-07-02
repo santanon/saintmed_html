@@ -124,7 +124,7 @@ $(function() {
                 borderRadius: 0,
                 formatter: function (params) {
                     // marker is an HTML tag
-                    var res = '<div style="padding: 8px;"><span style="font-weight: 700; color: #071866;">' + params.name + '</span>' + '<br>' + '<span style="font-weight: 500; color: #24E0E0; line-height: 16px">' + params.value + '</span></div>';
+                    var res = '<div style="padding: 8px;"><span style="font-weight: 700; color: #071866;">' + params.name + '</span>' + '<br>' + '<span style="font-weight: 500; color: #24E0E0; line-height: 16px">' + params.value + '%' + '</span></div>';
                     console.log(res);
                     return res;
                 },
@@ -156,42 +156,42 @@ $(function() {
                     },
                     data: [
                         {
-                            value: 1048,
+                            value: 30,
                             name: "SAINTMED Public Company Limited. 1",
                             itemStyle: {
                                 color: "#002842"
                             },
                         },
                         {
-                            value: 735, 
+                            value: 20,
                             name: "SAINTMED Public Company Limited. 2",
                             itemStyle: {
                                 color: "#BEC8CF"
                             },
                         },
                         {
-                            value: 580, 
+                            value: 15,
                             name: "SAINTMED Public Company Limited. 3",
                             itemStyle: {
                                 color: "#E4E8EB"
                             },
                         },
                         {
-                            value: 484, 
+                            value: 13,
                             name: "SAINTMED Public Company Limited. 4",
                             itemStyle: {
                                 color: "#404142"
                             },
                         },
                         {
-                            value: 450, 
+                            value: 13,
                             name: "SAINTMED Public Company Limited. 5",
                             itemStyle: {
                                 color: "#808080"
                             },
                         },
                         {
-                            value: 300, 
+                            value: 7,
                             name: "Other",
                             itemStyle: {
                                 color: "#C8C8C8"
