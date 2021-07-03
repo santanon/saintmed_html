@@ -856,6 +856,9 @@
                             }
                         }
                         .event-calendar{
+                            &:after{
+                                transform: scaleY(1);
+                            }
                             .event-title{
                                 color: #071866;
                             }
@@ -879,6 +882,7 @@
                     display: flex;
                     cursor: pointer;
                     height: 100%;
+                    overflow: hidden;
                     transition: all 0.2s ease-in-out;
                     .date-calendar{
                         transition: all 0.2s ease-in-out;
@@ -888,19 +892,19 @@
                         z-index: 1;
                         overflow: hidden;
                         width: 87px;
-                        &:after{
-                            content: "";
-                            position: absolute;
-                            bottom: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 100%;
-                            transform: scaleY(0);
-                            transform-origin: bottom center;
-                            background: #1294A6;
-                            z-index: -1;
-                            transition: transform 0.3s;
-                        }
+                        // &:after{
+                        //     content: "";
+                        //     position: absolute;
+                        //     bottom: 0;
+                        //     left: 0;
+                        //     width: 100%;
+                        //     height: 100%;
+                        //     transform: scaleY(0);
+                        //     transform-origin: bottom center;
+                        //     background: #1294A6;
+                        //     z-index: -1;
+                        //     transition: transform 0.3s;
+                        // }
                         .content{
                             display: flex;
                             align-items: center;
@@ -952,6 +956,22 @@
                         display: flex;
                         flex-direction: column;
                         align-self: center;
+                        position: relative;
+                        z-index: 1;
+                        overflow: hidden;
+                        // &:after{
+                        //     content: "";
+                        //     position: absolute;
+                        //     bottom: 0;
+                        //     left: 0;
+                        //     width: 100%;
+                        //     height: 100%;
+                        //     transform: scaleY(0);
+                        //     transform-origin: bottom center;
+                        //     background: #1294A6;
+                        //     z-index: -1;
+                        //     transition: transform 0.3s;
+                        // }
                         .event-title{
                             font-size: 1.0625rem;
                             line-height: 1.375rem;
@@ -969,6 +989,7 @@
                                     color: #242424;
                                     width: 50px;
                                     float: left;
+                                    transition: all 0.2s ease-in-out;
                                     &:after{
                                         content: '';
                                         display: block;
@@ -981,16 +1002,18 @@
                                     font-weight: 400;
                                     color: #242424;
                                     padding-left: 50px;
+                                    transition: all 0.2s ease-in-out;
                                 }
                             }
                         }
                         
                     }
                     &:hover{
+                        background-color: #1294A6;;
                         .date-calendar{
-                            &:after{
-                                transform: scaleY(1);
-                            }
+                            // &:after{
+                            //     transform: scaleY(1);
+                            // }
                             .content{
                                 .d, .m-y{
                                     color: #fff;
@@ -1004,6 +1027,21 @@
                                     .icon-calendar-plus{
                                         transition: all 0.2s ease-in-out;
                                         transform: rotate(90deg);
+                                    }
+                                }
+                            }
+                        }
+                        .event-calendar{
+                            .event-title{
+                                color: #fff;
+                            }
+                            .event-content-wrapper{
+                                .event-content{
+                                    .text{
+                                        color: #fff;
+                                    }
+                                    .desc{
+                                        color: #fff;
                                     }
                                 }
                             }
