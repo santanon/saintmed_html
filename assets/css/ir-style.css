@@ -688,6 +688,10 @@
         -webkit-transform: rotate(90deg);
         -ms-transform: rotate(90deg);
         transform: rotate(90deg); }
+      .content .content__body .ir-calendar--lastevent .box-item:hover .event-calendar:after {
+        -webkit-transform: scaleY(1);
+        -ms-transform: scaleY(1);
+        transform: scaleY(1); }
       .content .content__body .ir-calendar--lastevent .box-item:hover .event-calendar .event-title {
         color: #071866; }
       .content .content__body .ir-calendar--lastevent .box-item:hover .event-calendar .event-time .text {
@@ -704,6 +708,7 @@
     display: flex;
     cursor: pointer;
     height: 100%;
+    overflow: hidden;
     -webkit-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out; }
@@ -717,26 +722,6 @@
       z-index: 1;
       overflow: hidden;
       width: 87px; }
-      .content .content__body .ir-calendar--event .box-item .date-calendar:after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        -webkit-transform: scaleY(0);
-        -ms-transform: scaleY(0);
-        transform: scaleY(0);
-        -webkit-transform-origin: bottom center;
-        -ms-transform-origin: bottom center;
-        transform-origin: bottom center;
-        background: #1294A6;
-        z-index: -1;
-        -webkit-transition: -webkit-transform 0.3s;
-        transition: -webkit-transform 0.3s;
-        -o-transition: transform 0.3s;
-        transition: transform 0.3s;
-        transition: transform 0.3s, -webkit-transform 0.3s; }
       .content .content__body .ir-calendar--event .box-item .date-calendar .content {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -804,7 +789,10 @@
       -ms-flex-direction: column;
       flex-direction: column;
       -ms-flex-item-align: center;
-      align-self: center; }
+      align-self: center;
+      position: relative;
+      z-index: 1;
+      overflow: hidden; }
       .content .content__body .ir-calendar--event .box-item .event-calendar .event-title {
         font-size: 1.0625rem;
         line-height: 1.375rem;
@@ -819,7 +807,10 @@
           font-weight: 400;
           color: #242424;
           width: 50px;
-          float: left; }
+          float: left;
+          -webkit-transition: all 0.2s ease-in-out;
+          -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out; }
           .content .content__body .ir-calendar--event .box-item .event-calendar .event-content-wrapper .event-content .text:after {
             content: '';
             display: block;
@@ -829,28 +820,35 @@
           line-height: 1.5rem;
           font-weight: 400;
           color: #242424;
-          padding-left: 50px; }
-    .content .content__body .ir-calendar--event .box-item:hover .date-calendar:after {
-      -webkit-transform: scaleY(1);
-      -ms-transform: scaleY(1);
-      transform: scaleY(1); }
-    .content .content__body .ir-calendar--event .box-item:hover .date-calendar .content .d, .content .content__body .ir-calendar--event .box-item:hover .date-calendar .content .m-y {
-      color: #fff;
-      -webkit-transition: all 0.2s ease-in-out;
-      -o-transition: all 0.2s ease-in-out;
-      transition: all 0.2s ease-in-out; }
-    .content .content__body .ir-calendar--event .box-item:hover .date-calendar .content .icon_calendar .f-icon {
-      color: #fff;
-      -webkit-transition: all 0.2s ease-in-out;
-      -o-transition: all 0.2s ease-in-out;
-      transition: all 0.2s ease-in-out; }
-    .content .content__body .ir-calendar--event .box-item:hover .date-calendar .content .icon_calendar .icon-calendar-plus {
-      -webkit-transition: all 0.2s ease-in-out;
-      -o-transition: all 0.2s ease-in-out;
-      transition: all 0.2s ease-in-out;
-      -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-      transform: rotate(90deg); }
+          padding-left: 50px;
+          -webkit-transition: all 0.2s ease-in-out;
+          -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out; }
+    .content .content__body .ir-calendar--event .box-item:hover {
+      background-color: #1294A6; }
+      .content .content__body .ir-calendar--event .box-item:hover .date-calendar .content .d, .content .content__body .ir-calendar--event .box-item:hover .date-calendar .content .m-y {
+        color: #fff;
+        -webkit-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out; }
+      .content .content__body .ir-calendar--event .box-item:hover .date-calendar .content .icon_calendar .f-icon {
+        color: #fff;
+        -webkit-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out; }
+      .content .content__body .ir-calendar--event .box-item:hover .date-calendar .content .icon_calendar .icon-calendar-plus {
+        -webkit-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg); }
+      .content .content__body .ir-calendar--event .box-item:hover .event-calendar .event-title {
+        color: #fff; }
+      .content .content__body .ir-calendar--event .box-item:hover .event-calendar .event-content-wrapper .event-content .text {
+        color: #fff; }
+      .content .content__body .ir-calendar--event .box-item:hover .event-calendar .event-content-wrapper .event-content .desc {
+        color: #fff; }
   @media only screen and (max-width: 991px) {
     .content .content__body .block-accordion .accordion .card .card-header h2 .btn-link {
       padding: 15px; }
